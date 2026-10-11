@@ -13,11 +13,13 @@ from pathlib import Path
 from string import Template
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
+from structured_data import render as structured_data
 
 ROOT = Path(__file__).resolve().parent
 def esc(value): return html.escape(str(value or ''), quote=True)
 def load(path): return json.loads((ROOT / path).read_text(encoding='utf-8'))
 def template(filename, **values):
+    values.setdefault("jsonld", "")
     values.setdefault("icon_version", hashlib.sha256((ROOT / "assets/favicon.svg").read_bytes()).hexdigest()[:12])
     values.setdefault("style_version", hashlib.sha256((ROOT / "assets/style.css").read_bytes()).hexdigest()[:12])
     return Template((ROOT / 'templates' / filename).read_text(encoding='utf-8')).substitute(values)
@@ -67,8 +69,10 @@ def build(base_url, local=False):
         if child.is_dir(): shutil.rmtree(child)
         else: child.unlink()
     routes = []
+    schema_history = load('data/history.json') if (ROOT/'data/history.json').exists() else []
     def write(path, title, description, body, noindex=False):
         page = template('base.html', title=esc(title), description=esc(description), body=body,
+            jsonld=structured_data(path,body,base_url,config,providers,active,schema_history),
             canonical=esc(base_url + path), robots='noindex,follow' if noindex else 'index,follow',
             brand=esc(config['brand']), checked=esc(dataset['generated_at'][:10]))
         dest = site / path.lstrip('/') / 'index.html'; dest.parent.mkdir(parents=True,exist_ok=True)
