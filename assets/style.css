@@ -214,3 +214,25 @@ footer p,footer .fine-print { color:#c4cdd2; }
 .brand-deals { color:#fff; }
 header,footer { background:#191919; }
 .brand-dot { color:#ff962e; }
+
+/* Deep gray surfaces with readable warm accents. */
+:root { --ink:#f3f3f3; --paper:#202020; --white:#2b2b2b; --muted:#bdbdbd; --line:#454545; --accent:#ffb96c; }
+body { color-scheme:dark; }
+.hero { background:#303030; }
+.hero h1 span { color:#ffb96c; }
+.hero .eyebrow,.hero .lead { color:#d0d0d0; }
+.receipt,.facts,.purchase-box,blockquote,.notice { background:#292929; }
+.receipt .eyebrow,.receipt-head { color:#ffb96c; }
+.receipt-line { border-color:#454545; }
+.trust-strip,.providers-section,th { background:#303030; }
+.provider-mark { background:#414141; color:#f3f3f3; }
+.tag { background:#493522; color:#ffd09a; }
+.button { background:#ff962e; color:#191919; }
+.button:hover { background:#ffad58; }
+.brand-icon { color:#191919; }
+.deal-card { background:#2b2b2b; box-shadow:0 6px 18px rgba(0,0,0,.12); }
+.card-link:hover { color:#ffd09a; }
+.hero .text-link,.section-head>a { color:#ffb96c; }
+::selection { background:#6c441e; color:#fff; }
+html { scrollbar-color:#777 #202020; }
+nav a:hover { background:#333; }
