@@ -1,0 +1,55 @@
+name: Refresh official offers
+on:
+  schedule:
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scraper.py', 'build.py', 'validate.py', 'config/**', 'templates/**', 'assets/**', 'tests/**', '.github/workflows/update.yml']
+permissions:
+  contents: write
+concurrency:
+  group: official-offer-update
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      PYTHONUTF8: '1'
+      SITE_URL: ${{ vars.SITE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test parser and freshness rules
+        run: python -m unittest discover -s tests -v
+      - name: Check production origin
+        id: config
+        run: |
+          python -c 'import os,json; url=os.environ.get("SITE_URL") or json.load(open("config/site.json"))["site_url"]; open(os.environ["GITHUB_OUTPUT"],"a").write("ready="+str(bool(url)).lower()+"\n"); print("Production origin configured" if url else "Waiting for actual Pages origin; updates not activated yet")'
+      - name: Refresh official sources
+        if: steps.config.outputs.ready == 'true'
+        run: python scraper.py
+      - name: Build and validate production output
+        if: steps.config.outputs.ready == 'true'
+        run: |
+          python build.py
+          python validate.py
+      - name: Commit the dataset and generated site
+        if: steps.config.outputs.ready == 'true'
+        run: |
+          git config user.name 'hostingdeals-update[bot]'
+          git config user.email 'hostingdeals-update[bot]@users.noreply.github.com'
+          git add data site
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh official offer evidence and static site"
+            git push origin HEAD:main
+          fi
+      - name: Report source health
+        if: steps.config.outputs.ready == 'true'
+        run: |
+          python -c 'import json,os; d=json.load(open("data/health.json")); f=open(os.environ["GITHUB_STEP_SUMMARY"],"a"); f.write("## Official source health\n\n"+json.dumps(d,indent=2)+"\n"); assert d["observed_offers"] > 0, "No offers observed; inspect source health"'
