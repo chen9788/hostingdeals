@@ -27,7 +27,7 @@ def check(base_url):
                 url=u.path
             elif u.scheme:errors.append('Unexpected URL scheme: '+url);continue
             if url.startswith('#'):continue
-            local=site/unquote(url.lstrip('/')).split('#')[0]
+            local=site/unquote(u.path.lstrip('/'))
             if local.is_dir():local=local/'index.html'
             if not local.exists():errors.append(f'Broken local link: {path.name}: {url}')
     xml=ET.parse(site/'sitemap.xml')
@@ -52,3 +52,4 @@ if __name__=='__main__':
     origin=a.base_url or os.environ.get('SITE_URL') or json.loads((ROOT/'config/site.json').read_text())['site_url']
     if not origin:p.error('Set the actual site origin with --base-url, SITE_URL or config/site.json')
     check(origin)
+
