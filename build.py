@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent
 def esc(value): return html.escape(str(value or ''), quote=True)
 def load(path): return json.loads((ROOT / path).read_text(encoding='utf-8'))
 def template(filename, **values):
+    values.setdefault("icon_version", hashlib.sha256((ROOT / "assets/favicon.svg").read_bytes()).hexdigest()[:12])
     values.setdefault("style_version", hashlib.sha256((ROOT / "assets/style.css").read_bytes()).hexdigest()[:12])
     return Template((ROOT / 'templates' / filename).read_text(encoding='utf-8')).substitute(values)
 def fresh(offer, now):
