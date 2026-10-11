@@ -144,6 +144,7 @@ def build(base_url, local=False):
     for route in routes:
         if route.startswith('/deals/') and not any(route=='/deals/'+o['id']+'/' for o in active): continue
         item=ET.SubElement(sitemap,'url');ET.SubElement(item,'loc').text=base_url+route
+        ET.SubElement(item,'lastmod').text=dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')
     ET.ElementTree(sitemap).write(site/'sitemap.xml',encoding='utf-8',xml_declaration=True)
     (site/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+base_url+'/sitemap.xml\n',encoding='utf-8')
     rss=ET.Element('rss',version='2.0'); channel=ET.SubElement(rss,'channel')
