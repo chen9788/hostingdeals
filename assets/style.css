@@ -159,3 +159,51 @@ footer p { font-size:14px; }
 th { background:#f3eee7; }
 .purchase-box .deal-value { color:var(--accent); }
 body { color-scheme:light; }
+
+/* Deal-first editorial layout: ink navigation, amber lead, white offer panels. */
+:root { --ink:#24313b; --paper:#f4f3ef; --line:#e2e2db; --muted:#58636b; --accent:#895010; }
+header { background:#24313b; color:#fff; min-height:88px; border:0; max-width:none; padding-left:max(32px,calc((100vw - 1184px)/2)); padding-right:max(32px,calc((100vw - 1184px)/2)); }
+.brand { font-size:26px; font-weight:700; }
+.brand-icon { background:none; width:40px; height:40px; border-radius:0; flex-shrink:0; }
+.brand-icon img { display:block; width:40px; height:40px; }
+.brand-go,.brand-dot { color:#edaa54; }
+nav a:hover { background:#394650; }
+nav .status-dot { background:#edaa54; }
+header a:focus-visible { outline-color:#edaa54; }
+.hero { background:#f6dcba; border-radius:20px; padding:38px 40px; margin:32px 0 20px; grid-template-columns:1.35fr 1fr; gap:50px; align-items:center; }
+.hero h1 { font-size:clamp(40px,4.3vw,58px); line-height:1.06; }
+.hero h1 span { color:#895010; }
+.hero .eyebrow { color:#68513c; margin-bottom:14px; }
+.hero .lead { color:#3e4347; font-size:16px; line-height:1.65; }
+.hero-actions { margin:22px 0 20px; }
+.button { background:#24313b; color:#fff; border-radius:10px; }
+.button:hover { background:#394650; }
+.receipt { padding:24px; margin:0; background:#fffaf3; border:0; box-shadow:0 12px 24px rgba(77,51,21,.08); }
+.receipt h2 { font-size:25px; margin-bottom:14px; }
+.receipt-line { padding:9px 0; }
+.trust-strip { background:#e9ece8; border:0; border-radius:10px; padding:15px 22px; justify-content:space-between; font-size:11px; }
+.offers-section { padding-top:38px; }
+.section-head h2 { font-size:30px; }
+#cloud .deal-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+#cloud .deal-card { display:flex; flex-direction:column; padding:24px; gap:0; }
+#cloud .card-top { flex-direction:row; justify-content:space-between; align-items:center; margin-bottom:18px; }
+#cloud .deal-card>.eyebrow { margin:0 0 8px; }
+#cloud .deal-card h3 { font-size:19px; }
+#cloud .deal-value { font-size:28px; margin:20px 0 8px; }
+#cloud .card-detail { margin:0 0 20px; font-size:14px; }
+#cloud .deal-card dl { margin-top:auto; font-size:13px; }
+#cloud .deal-card dl>div { grid-template-columns:.8fr 1.2fr; padding:8px 0; }
+#cloud .card-link { margin-top:16px; align-self:stretch; font-size:14px; padding:12px 0 0; border-top:1px solid var(--line); }
+.deal-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.deal-card { box-shadow:0 4px 12px rgba(36,49,59,.035); padding:24px; }
+.provider-mark { background:#e9ece8; color:#24313b; width:40px; height:40px; font-size:13px; }
+.tag { background:#f8e8d2; color:#895010; }
+.deal-value { padding-bottom:16px; border-bottom:1px solid var(--line); }
+.card-link:hover { color:#24313b; }
+.providers-section { background:#e9ece8; border-radius:18px; padding:32px; gap:42px; margin:48px 0; }
+footer { background:#24313b; color:#fff; border:0; max-width:none; padding-left:max(32px,calc((100vw - 1184px)/2)); padding-right:max(32px,calc((100vw - 1184px)/2)); }
+footer p,footer .fine-print { color:#c4cdd2; }
+.page-head { border-bottom:1px solid var(--line); margin-bottom:28px; }
+@media(max-width:1050px) { header,footer { padding-left:28px; padding-right:28px; } .hero { gap:28px; padding:30px; } .deal-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:760px) { header { min-height:88px; } .hero { grid-template-columns:1fr; padding:28px; margin-top:24px; gap:24px; } #cloud .deal-grid,.deal-grid { grid-template-columns:1fr; } .trust-strip { justify-content:flex-start; gap:12px 24px; } .providers-section { padding:24px; } }
+@media(max-width:540px) { header,footer { padding-left:20px; padding-right:20px; } .brand { font-size:23px; gap:8px; } .hero { padding:24px; margin-top:20px; border-radius:16px; } .hero h1 { font-size:38px; } .hero-actions { align-items:flex-start; flex-direction:column; gap:14px; } .receipt { padding:20px; } .receipt-line { gap:12px; font-size:12px; } .receipt h2 { font-size:24px; } .trust-strip { padding:16px; } .providers-section { padding:22px; } }
