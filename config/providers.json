@@ -1,0 +1,396 @@
+[
+  {
+    "id": "digitalocean",
+    "name": "DigitalOcean",
+    "home": "https://www.digitalocean.com/",
+    "domains": [
+      "digitalocean.com"
+    ],
+    "category": "Cloud & VPS",
+    "offer_sources": [
+      "https://www.digitalocean.com/pricing/agent-droplets"
+    ],
+    "recipes": [
+      {
+        "id": "agent-droplets-trial",
+        "title": "DigitalOcean Agent Droplets trial (AI product only)",
+        "pattern": "Agent Droplets Free Trial Pro Team Monthly price (?P<benefit>\\$\\d+ Credit)",
+        "terms_patterns": [
+          "This balance is scoped to AI products only[^.]*\\.",
+          "Available to new DigitalOcean customers only\\."
+        ]
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": "https://www.digitalocean.com/affiliates",
+    "note": "The monitored trial is Agent Droplets, an AI product; it is not a general VPS credit. Core VPS promotions remain unverified."
+  },
+  {
+    "id": "cloudways",
+    "name": "Cloudways",
+    "home": "https://www.cloudways.com/en/",
+    "domains": [
+      "cloudways.com"
+    ],
+    "category": "Cloud & VPS",
+    "offer_sources": [
+      "https://www.cloudways.com/en/promo-code.php"
+    ],
+    "recipes": [
+      {
+        "id": "hosting-promotion",
+        "title": "Cloudways introductory hosting discount",
+        "pattern": "You will get (?P<discount>\\d+% off) for (?P<term>\\d+ months) on all plans",
+        "terms_patterns": [
+          "This offer is for new users[^.]*\\.",
+          "Once the promotional period ends, standard pricing applies\\.",
+          "No\\. This offer is not available to existing Cloudways customers\\."
+        ],
+        "field_patterns": {
+          "renewal": "Once the promotional period ends, standard pricing applies\\."
+        }
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": "https://www.cloudways.com/en/web-hosting-affiliate-program.php"
+  },
+  {
+    "id": "a2-hosting",
+    "name": "A2 Hosting",
+    "home": "https://www.a2hosting.com/",
+    "domains": [
+      "hosting.com",
+      "a2hosting.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://hosting.com/hosting/"
+    ],
+    "recipes": [],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": "https://hosting.com/about/affiliate-program/",
+    "note": "The former A2 Hosting site now redirects to hosting.com. Legacy plan renewal prices must be checked in the customer account."
+  },
+  {
+    "id": "dreamhost",
+    "name": "DreamHost",
+    "home": "https://www.dreamhost.com/",
+    "domains": [
+      "dreamhost.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://www.dreamhost.com/promo/"
+    ],
+    "recipes": [
+      {
+        "id": "launch",
+        "title": "DreamHost Web Hosting Launch",
+        "pattern": "Web Hosting Launch.{0,120}?On Sale First (?P<term>\\d+ years) at (?P<price>\\$[\\d.]+\\s*/mo) (?P<discount>SAVE \\d+%).{0,40}?Auto-renews at (?P<renewal>\\$[\\d.]+\\s*/mo) after \\d+ years\\.",
+        "terms_patterns": [
+          "The full term plus taxes are charged at checkout\\."
+        ]
+      },
+      {
+        "id": "growth",
+        "title": "DreamHost Web Hosting Growth",
+        "pattern": "Web Hosting Growth.{0,120}?On Sale First (?P<term>\\d+ years) at (?P<price>\\$[\\d.]+\\s*/mo) (?P<discount>SAVE \\d+%).{0,40}?Auto-renews at (?P<renewal>\\$[\\d.]+\\s*/mo) after \\d+ years\\.",
+        "terms_patterns": [
+          "The full term plus taxes are charged at checkout\\."
+        ]
+      },
+      {
+        "id": "scale",
+        "title": "DreamHost Web Hosting Scale",
+        "pattern": "Web Hosting Scale.{0,120}?On Sale First (?P<term>\\d+ years) at (?P<price>\\$[\\d.]+\\s*/mo) (?P<discount>SAVE \\d+%).{0,40}?Auto-renews at (?P<renewal>\\$[\\d.]+\\s*/mo) after \\d+ years\\.",
+        "terms_patterns": [
+          "The full term plus taxes are charged at checkout\\."
+        ]
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": "https://www.dreamhost.com/affiliates/"
+  },
+  {
+    "id": "vultr",
+    "name": "Vultr",
+    "home": "https://www.vultr.com/",
+    "domains": [
+      "vultr.com"
+    ],
+    "category": "Cloud & VPS",
+    "offer_sources": [
+      "https://docs.vultr.com/platform/create-an-account"
+    ],
+    "recipes": [
+      {
+        "id": "trial-credit",
+        "title": "Vultr introductory cloud credits",
+        "pattern": "Vultr offers (?P<benefit>free credits for up to (?P<term>\\d+ days)) for you to try our services\\.",
+        "terms_patterns": [
+          "Add a payment method of your choice for verification purposes\\.",
+          "Ensure to deprovision the resources before your credits expire or end to avoid getting billed extra\\."
+        ]
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": null
+  },
+  {
+    "id": "namecheap",
+    "name": "Namecheap",
+    "home": "https://www.namecheap.com/",
+    "domains": [
+      "namecheap.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://www.namecheap.com/promos/coupons/"
+    ],
+    "recipes": [
+      {
+        "id": "monthly-domain-code",
+        "title": "Namecheap monthly registration and transfer coupon",
+        "pattern": "Valid (?P<valid_from>[A-Za-z]+ \\d+) - (?P<valid_until>[A-Za-z]+ \\d+, \\d{4}).{0,300}?(?P<code>[A-Z]{5,12}DOT)",
+        "terms_patterns": [
+          "Promotional price applies to first-year registrations and transfers only[^.]*\\."
+        ]
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": null
+  },
+  {
+    "id": "godaddy",
+    "name": "GoDaddy",
+    "home": "https://www.godaddy.com/en-us",
+    "domains": [
+      "godaddy.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://www.godaddy.com/promos/coupon-promo-codes"
+    ],
+    "recipes": [],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": null
+  },
+  {
+    "id": "hostinger",
+    "name": "Hostinger",
+    "home": "https://www.hostinger.com/",
+    "domains": [
+      "hostinger.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://www.hostinger.com/pricing"
+    ],
+    "recipes": [
+      {
+        "id": "premium",
+        "title": "Hostinger Premium",
+        "pattern": "(?P<discount>\\d+% off) Premium.{0,220}?\\$ [\\d.]+ (?P<price>\\$ [\\d.]+ /mo).{0,50}?Get (?P<term>\\d+ months) for \\$[\\d,.]+ \\(regular price \\$[\\d,.]+\\)\\. Renews at (?P<renewal>\\$[\\d.]+/mo)\\.",
+        "terms_patterns": [
+          "All plans are paid upfront\\.",
+          "The monthly rate reflects the total plan price divided by the number of months in your plan\\."
+        ]
+      },
+      {
+        "id": "unlimited",
+        "title": "Hostinger Unlimited",
+        "pattern": "(?P<discount>\\d+% off) Unlimited.{0,220}?\\$ [\\d.]+ (?P<price>\\$ [\\d.]+ /mo).{0,50}?Get (?P<term>\\d+ months) for \\$[\\d,.]+ \\(regular price \\$[\\d,.]+\\)\\. Renews at (?P<renewal>\\$[\\d.]+/mo)\\.",
+        "terms_patterns": [
+          "All plans are paid upfront\\.",
+          "The monthly rate reflects the total plan price divided by the number of months in your plan\\."
+        ]
+      },
+      {
+        "id": "cloud-startup",
+        "title": "Hostinger Cloud Startup",
+        "pattern": "(?P<discount>\\d+% off) Cloud Startup.{0,220}?\\$ [\\d.]+ (?P<price>\\$ [\\d.]+ /mo).{0,50}?Get (?P<term>\\d+ months) for \\$[\\d,.]+ \\(regular price \\$[\\d,.]+\\)\\. Renews at (?P<renewal>\\$[\\d.]+/mo)\\.",
+        "terms_patterns": [
+          "All plans are paid upfront\\.",
+          "The monthly rate reflects the total plan price divided by the number of months in your plan\\."
+        ]
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": "https://www.hostinger.com/affiliates"
+  },
+  {
+    "id": "siteground",
+    "name": "SiteGround",
+    "home": "https://www.siteground.com/",
+    "domains": [
+      "siteground.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://www.siteground.com/web-hosting.htm"
+    ],
+    "recipes": [],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": "https://eu.siteground.com/affiliates"
+  },
+  {
+    "id": "bluehost",
+    "name": "Bluehost",
+    "home": "https://www.bluehost.com/",
+    "domains": [
+      "bluehost.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://www.bluehost.com/pricing"
+    ],
+    "recipes": [
+      {
+        "id": "starter",
+        "title": "Bluehost Starter introductory plan",
+        "pattern": "Starter.{0,100}?(?P<price>\\$[\\d.]+/mo).{0,100}?For (?P<term>\\d+ month term).{0,30}?Renews at (?P<renewal>\\$[\\d.]+/mo)",
+        "terms_patterns": [
+          "not for successive or renewal periods\\."
+        ]
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": null
+  },
+  {
+    "id": "hostgator",
+    "name": "HostGator",
+    "home": "https://www.hostgator.com/",
+    "domains": [
+      "hostgator.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://www.hostgator.com/coupons"
+    ],
+    "recipes": [
+      {
+        "id": "hosting-coupon",
+        "title": "HostGator introductory hosting coupon",
+        "pattern": "Web Hosting Up to (?P<discount>\\d+\\s*% off).{0,160}?Coupon code: (?P<code>[A-Z]+)",
+        "terms_patterns": [
+          "Coupon codes are valid for new signups only[^.]*\\."
+        ]
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": null
+  },
+  {
+    "id": "kinsta",
+    "name": "Kinsta",
+    "home": "https://kinsta.com/",
+    "domains": [
+      "kinsta.com"
+    ],
+    "category": "Web hosting",
+    "offer_sources": [
+      "https://kinsta.com/docs/billing/wordpress-hosting-plans/"
+    ],
+    "recipes": [
+      {
+        "id": "wordpress-trial",
+        "title": "Kinsta first month on eligible WordPress plans",
+        "pattern": "First month free: If you.re new to Kinsta, you can sign up for our (?P<eligible>[^.]+?) and get the (?P<benefit>first (?P<term>\\d+ days) free)\\s*, on either monthly or annual billing\\.",
+        "terms_patterns": [
+          "This option is only available to new customers who have not previously subscribed to a WordPress plan and applies only to the first WordPress plan you purchase\\.",
+          "Overages are still applicable during your first free month\\."
+        ],
+        "field_patterns": {
+          "renewal": "Billing begins in the second month[^.]*\\."
+        }
+      }
+    ],
+    "reject_url_markers": [
+      "https://eu.",
+      "/en-in",
+      "/en-gb",
+      "/en-au",
+      "/in/",
+      "/uk/"
+    ],
+    "affiliate_program_url": "https://kinsta.com/affiliates/"
+  }
+]
