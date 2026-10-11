@@ -33,7 +33,7 @@ Never publish the localhost preview output. Rebuild with the actual production o
 1. Create a public GitHub repository named `hostingdeals` and push these files on `main`. Public standard GitHub-hosted runners are the intended free path; check the current account/plan terms.
 2. In Cloudflare, create a **Pages** project using Git integration, authorize access only to this repository, and select `main`.
 3. Build command: `python build.py`; output directory: `site`; root directory: repository root. Set `PYTHON_VERSION=3.12`. No framework preset is needed.
-4. For the first deployment, `CF_PAGES_URL` supplies the real Pages origin. After it succeeds, set `config/site.json.site_url` and the GitHub repository Actions variable `SITE_URL` to the actual production `https://…pages.dev` origin. The explicit value ensures production canonicals also stay correct on preview builds.
+4. For the first deployment, `CF_PAGES_URL` supplies the real Pages origin. After it succeeds, set `config/site.json.site_url` to the actual production `https://…pages.dev` origin. An optional GitHub repository Actions variable `SITE_URL` overrides it. The explicit value ensures production canonicals also stay correct on preview builds.
 5. Allow Actions read/write repository contents if account policy currently prevents it. Run **Refresh official offers** manually and inspect the commit, source health, and Pages deployment.
 6. Confirm external HTTP 200 at `/`, `/robots.txt`, `/sitemap.xml`, `/data/health.json` and a deal page. All sitemap URLs must use the actual production origin.
 

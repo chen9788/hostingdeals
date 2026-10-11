@@ -1,5 +1,5 @@
 """Check static routes, UTF-8, sitemap origins and published dataset integrity."""
-import argparse,json
+import argparse,json,os
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
@@ -48,4 +48,7 @@ def check(base_url):
     if errors:raise SystemExit('\n'.join(errors))
     print(f'PASS: {len(pages)} HTML pages, internal links, UTF-8, sitemap origin, robots and offer provenance')
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--base-url',required=True);a=p.parse_args();check(a.base_url)
+    p=argparse.ArgumentParser();p.add_argument('--base-url');a=p.parse_args()
+    origin=a.base_url or os.environ.get('SITE_URL') or json.loads((ROOT/'config/site.json').read_text())['site_url']
+    if not origin:p.error('Set the actual site origin with --base-url, SITE_URL or config/site.json')
+    check(origin)
