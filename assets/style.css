@@ -207,3 +207,10 @@ footer p,footer .fine-print { color:#c4cdd2; }
 @media(max-width:1050px) { header,footer { padding-left:28px; padding-right:28px; } .hero { gap:28px; padding:30px; } .deal-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:760px) { header { min-height:88px; } .hero { grid-template-columns:1fr; padding:28px; margin-top:24px; gap:24px; } #cloud .deal-grid,.deal-grid { grid-template-columns:1fr; } .trust-strip { justify-content:flex-start; gap:12px 24px; } .providers-section { padding:24px; } }
 @media(max-width:540px) { header,footer { padding-left:20px; padding-right:20px; } .brand { font-size:23px; gap:8px; } .hero { padding:24px; margin-top:20px; border-radius:16px; } .hero h1 { font-size:38px; } .hero-actions { align-items:flex-start; flex-direction:column; gap:14px; } .receipt { padding:20px; } .receipt-line { gap:12px; font-size:12px; } .receipt h2 { font-size:24px; } .trust-strip { padding:16px; } .providers-section { padding:22px; } }
+
+/* Two-tone wordmark: orange hosting, light deals on ink surfaces. */
+.brand-word { display:inline-flex; gap:0; }
+.brand-hosting { color:#ff962e; }
+.brand-deals { color:#fff; }
+header,footer { background:#191919; }
+.brand-dot { color:#ff962e; }
