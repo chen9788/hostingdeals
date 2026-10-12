@@ -71,6 +71,11 @@ def build(base_url, local=False):
     routes = []
     schema_history = load('data/history.json') if (ROOT/'data/history.json').exists() else []
     def write(path, title, description, body, noindex=False):
+        for provider in providers:
+            if path == '/providers/'+provider['id']+'/' and provider.get('coupon_page'):
+                body += '<section class="prose"><h2>Official coupon and promo evidence</h2><p><a href="'+provider['coupon_page']+'">'+esc(provider['coupon_title'])+'</a></p></section>'
+        if path == '/':
+            body += '<section class="prose"><h2>Official coupon and promo guides</h2>' + ''.join('<p><a href="'+p['coupon_page']+'">'+esc(p['coupon_title'])+'</a></p>' for p in providers if p.get('coupon_page')) + '</section>'
         page = template('base.html', title=esc(title), description=esc(description), body=body,
             jsonld=structured_data(path,body,base_url,config,providers,active,schema_history),
             canonical=esc(base_url + path), robots='noindex,follow' if noindex else 'index,follow',
@@ -97,6 +102,11 @@ def build(base_url, local=False):
     write('/renewals/bluehost/', 'Bluehost Renewal Prices, Coupons and Auto-Renewal Charges | HostingDealsGo',
         'Official Bluehost introductory versus renewal prices, billing descriptions and three unverified personal reports.',
         (ROOT / 'content/bluehost-renewal.html').read_text(encoding='utf-8'))
+    for provider in providers:
+        if provider.get('coupon_page'):
+            write(provider['coupon_page'], provider['coupon_title']+' | HostingDealsGo',
+                'Official codes, offer eligibility, renewal limits and refund evidence for '+provider['name']+'.',
+                (ROOT / ('content/'+provider['id']+'-promo.html')).read_text(encoding='utf-8'))
     for p in providers:
         if p['id'] == 'godaddy':
             write('/providers/godaddy/', 'GoDaddy renewal prices and source status | HostingDealsGo',

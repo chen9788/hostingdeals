@@ -66,7 +66,31 @@
       "/in/",
       "/uk/"
     ],
-    "affiliate_program_url": "https://www.cloudways.com/en/web-hosting-affiliate-program.php"
+    "affiliate_program_url": "https://www.cloudways.com/en/web-hosting-affiliate-program.php",
+    "coupon_page": "/coupons/cloudways/",
+    "coupon_title": "Cloudways coupon code",
+    "coupon_sources": [
+      {
+        "name": "Auto-applied campaign — redemption Unconfirmed",
+        "url": "https://www.cloudways.com/en/promo-code.php"
+      },
+      {
+        "name": "Campaign eligibility",
+        "url": "https://www.cloudways.com/en/promo-code.php"
+      },
+      {
+        "name": "After the promotional period",
+        "url": "https://www.cloudways.com/en/promo-code.php"
+      },
+      {
+        "name": "Agency partner benefits",
+        "url": "https://www.cloudways.com/en/agency-partner-program.php"
+      },
+      {
+        "name": "Eligible unused prepaid funds",
+        "url": "https://support.cloudways.com/en/articles/9652801-how-to-manage-your-cloudways-payments"
+      }
+    ]
   },
   {
     "id": "a2-hosting",
@@ -200,7 +224,31 @@
       "/in/",
       "/uk/"
     ],
-    "affiliate_program_url": null
+    "affiliate_program_url": null,
+    "coupon_page": "/coupons/namecheap/",
+    "coupon_title": "Namecheap promo code",
+    "coupon_sources": [
+      {
+        "name": "GHOSTDOT",
+        "url": "https://www.namecheap.com/promos/coupons/"
+      },
+      {
+        "name": "GHOSTPE",
+        "url": "https://www.namecheap.com/promos/coupons/"
+      },
+      {
+        "name": "GHOSTSSL",
+        "url": "https://www.namecheap.com/promos/coupons/"
+      },
+      {
+        "name": "Domain privacy benefit",
+        "url": "https://www.namecheap.com/security/domain-privacy-service/"
+      },
+      {
+        "name": "Domain renewal refunds",
+        "url": "https://www.namecheap.com/legal/general/refund-policy/"
+      }
+    ]
   },
   {
     "id": "godaddy",
@@ -244,6 +292,30 @@
       {
         "name": "Included domain features",
         "url": "https://www.godaddy.com/domains"
+      }
+    ],
+    "coupon_page": "/coupons/godaddy/",
+    "coupon_title": "GoDaddy promo code",
+    "coupon_sources": [
+      {
+        "name": "No reusable public code verified",
+        "url": "https://www.godaddy.com/promos/coupon-promo-codes"
+      },
+      {
+        "name": ".com introductory offer — redemption Unconfirmed",
+        "url": "https://www.godaddy.com/tlds/com-domain"
+      },
+      {
+        "name": "Eligible renewal email offers",
+        "url": "https://www.godaddy.com/promos/renewal-codes"
+      },
+      {
+        "name": "Paid DDC membership",
+        "url": "https://www.godaddy.com/help/what-is-discount-domain-club-2398"
+      },
+      {
+        "name": "DDC refund restriction",
+        "url": "https://www.godaddy.com/legal/agreements/refund-policy"
       }
     ]
   },
@@ -295,7 +367,31 @@
       "/in/",
       "/uk/"
     ],
-    "affiliate_program_url": "https://www.hostinger.com/affiliates"
+    "affiliate_program_url": "https://www.hostinger.com/affiliates",
+    "coupon_page": "/coupons/hostinger/",
+    "coupon_title": "Hostinger coupon code",
+    "coupon_sources": [
+      {
+        "name": "COUPONSPAGE",
+        "url": "https://www.hostinger.com/coupons"
+      },
+      {
+        "name": "Displayed plan alternatives",
+        "url": "https://www.hostinger.com/coupons"
+      },
+      {
+        "name": "Coupon and renewal restrictions",
+        "url": "https://www.hostinger.com/coupons"
+      },
+      {
+        "name": "Included first-year benefits",
+        "url": "https://www.hostinger.com/coupons"
+      },
+      {
+        "name": "Refund scope",
+        "url": "https://www.hostinger.com/legal/refund-policy"
+      }
+    ]
   },
   {
     "id": "siteground",
@@ -370,6 +466,30 @@
       {
         "name": "Billing receipts and early renewal description",
         "url": "https://www.bluehost.com/help/article/view-billing-receipts-and-payment-history"
+      }
+    ],
+    "coupon_page": "/coupons/bluehost/",
+    "coupon_title": "Bluehost promo code",
+    "coupon_sources": [
+      {
+        "name": "Starter introductory plan",
+        "url": "https://www.bluehost.com/web-hosting"
+      },
+      {
+        "name": "Business introductory plan",
+        "url": "https://www.bluehost.com/web-hosting"
+      },
+      {
+        "name": "eCommerce Essentials",
+        "url": "https://www.bluehost.com/web-hosting"
+      },
+      {
+        "name": "Initial-term eligibility",
+        "url": "https://www.bluehost.com/help/article/shared-hosting-prices"
+      },
+      {
+        "name": "Refund and add-on limits",
+        "url": "https://www.bluehost.com/help/article/refundpolicy"
       }
     ]
   },
