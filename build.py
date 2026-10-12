@@ -90,10 +90,13 @@ def build(base_url, local=False):
         offer_count=len(active), provider_count=len(providers),
         cloud_cards=''.join(card(o,index,money) for o in clouds) or '<p>No freshly observed cloud offers. Check provider status below.</p>',
         hosting_cards=''.join(card(o,index,money) for o in hosts) or '<p>No freshly observed hosting offers.</p>',
-        provider_rows=''.join(f'<a class="provider-row" href="/providers/{p["id"]}/"><strong>{esc(p["name"])}</strong><span>{esc(states.get(p["id"],{}).get("status","unknown").replace("_"," "))}</span><span>→</span></a>' for p in providers)) + ''.join(placements) + '<section class="prose"><h2>Renewal price evidence</h2><p><a href="/renewals/godaddy/">GoDaddy renewal coupons, prices and existing-customer discounts — official evidence</a></p></section>')
+        provider_rows=''.join(f'<a class="provider-row" href="/providers/{p["id"]}/"><strong>{esc(p["name"])}</strong><span>{esc(states.get(p["id"],{}).get("status","unknown").replace("_"," "))}</span><span>→</span></a>' for p in providers)) + ''.join(placements) + '<section class="prose"><h2>Renewal price evidence</h2><p><a href="/renewals/godaddy/">GoDaddy renewal coupons, prices and existing-customer discounts — official evidence</a></p><p><a href="/renewals/bluehost/">Bluehost renewal prices, coupons and automatic billing — official evidence</a></p></section>')
     write('/renewals/godaddy/', 'GoDaddy Renewal Coupon, Promo Codes and Domain Renewal Prices | HostingDealsGo',
         'Official US GoDaddy renewal prices, membership tiers, registration terms and three sourced customer reports.',
         (ROOT / 'content/godaddy-renewal.html').read_text(encoding='utf-8'))
+    write('/renewals/bluehost/', 'Bluehost Renewal Prices, Coupons and Auto-Renewal Charges | HostingDealsGo',
+        'Official Bluehost introductory versus renewal prices, billing descriptions and three unverified personal reports.',
+        (ROOT / 'content/bluehost-renewal.html').read_text(encoding='utf-8'))
     for p in providers:
         if p['id'] == 'godaddy':
             write('/providers/godaddy/', 'GoDaddy renewal prices and source status | HostingDealsGo',
@@ -116,7 +119,7 @@ def build(base_url, local=False):
             cards=''.join(card(o,index,money) for o in offers) or '<div class="notice">No fresh offer is published for this provider. This does not mean there are no offers; the source may block access, need JavaScript, redirect regions, or have changed.</div>',
             checked=esc(s.get('checked_at','Not checked')), js_mode=esc(s.get('js_mode','unknown').replace('_',' ')),
             source_links=links, sitemaps=''.join('<li>'+outbound(u,'Advertised sitemap')+'</li>' for u in s.get('sitemaps',[])),
-            feeds=''.join('<li>'+outbound(u,'Advertised feed')+'</li>' for u in s.get('feeds',[])) or '<li>No feed discovered in the inspected home page.</li>'))
+            feeds=''.join('<li>'+outbound(u,'Advertised feed')+'</li>' for u in s.get('feeds',[])) or '<li>No feed discovered in the inspected home page.</li>') + ('<section class="prose"><h2>Renewal evidence</h2><p><a href="/renewals/bluehost/">Bluehost renewal price and auto-renewal guide</a></p></section>' if p['id']=='bluehost' else ''))
     for offer in dataset['offers']:
         live = fresh(offer, now)
         url, sponsored = target(offer, money)

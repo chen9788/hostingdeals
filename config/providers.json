@@ -348,7 +348,30 @@
       "/in/",
       "/uk/"
     ],
-    "affiliate_program_url": null
+    "affiliate_program_url": null,
+    "renewal_page": "/renewals/bluehost/",
+    "renewal_sources": [
+      {
+        "name": "Official hosting renewal price table",
+        "url": "https://www.bluehost.com/help/article/renewal-price-faq"
+      },
+      {
+        "name": "Current introductory hosting prices",
+        "url": "https://www.bluehost.com/web-hosting"
+      },
+      {
+        "name": "Shared hosting terms and optional add-ons",
+        "url": "https://www.bluehost.com/help/article/shared-hosting-prices"
+      },
+      {
+        "name": "Automatic billing dates",
+        "url": "https://www.bluehost.com/help/article/bh-invoicing-and-automatic-billing"
+      },
+      {
+        "name": "Billing receipts and early renewal description",
+        "url": "https://www.bluehost.com/help/article/view-billing-receipts-and-payment-history"
+      }
+    ]
   },
   {
     "id": "hostgator",
