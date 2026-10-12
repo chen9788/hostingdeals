@@ -92,6 +92,11 @@ def build(base_url, local=False):
         hosting_cards=''.join(card(o,index,money) for o in hosts) or '<p>No freshly observed hosting offers.</p>',
         provider_rows=''.join(f'<a class="provider-row" href="/providers/{p["id"]}/"><strong>{esc(p["name"])}</strong><span>{esc(states.get(p["id"],{}).get("status","unknown").replace("_"," "))}</span><span>→</span></a>' for p in providers)) + ''.join(placements))
     for p in providers:
+        if p['id'] == 'namecheap':
+            write('/providers/namecheap/', 'Namecheap Domain Renewal Prices vs First-Year Registration | HostingDealsGo',
+                'Verified Namecheap .com renewal pricing, first-year offers, ICANN fees and official source evidence.',
+                (ROOT / 'content/namecheap-renewal.html').read_text(encoding='utf-8'))
+            continue
         offers = [o for o in active if o['provider'] == p['id']]
         s = states.get(p['id'],{})
         links = ' '.join(outbound(url,'Official offer source') for url in p['offer_sources'])
