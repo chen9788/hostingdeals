@@ -222,7 +222,30 @@
       "/in/",
       "/uk/"
     ],
-    "affiliate_program_url": null
+    "affiliate_program_url": null,
+    "renewal_page": "/renewals/godaddy/",
+    "renewal_sources": [
+      {
+        "name": "GoDaddy .com renewal tiers",
+        "url": "https://www.godaddy.com/domains/discount-domain-club"
+      },
+      {
+        "name": "GoDaddy .com registration promotion",
+        "url": "https://www.godaddy.com/tlds/com-domain"
+      },
+      {
+        "name": "Account renewal-price instructions",
+        "url": "https://www.godaddy.com/help/check-my-domain-renewal-price-26950"
+      },
+      {
+        "name": "Renewal and price-change agreement",
+        "url": "https://www.godaddy.com/legal/agreements/domain-name-registration-agreement"
+      },
+      {
+        "name": "Included domain features",
+        "url": "https://www.godaddy.com/domains"
+      }
+    ]
   },
   {
     "id": "hostinger",

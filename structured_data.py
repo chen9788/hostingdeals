@@ -65,6 +65,10 @@ def render(path, body, origin, config, providers, active, history):
         if offers: node['offers']=offers
         graph.append(node);page['mainEntity']={'@id':node['@id']}
     entries=None
+    if path=='/renewals/godaddy/':
+        p=index['godaddy']
+        crumbs.append((p['name'],origin+'/providers/godaddy/'))
+        entries=[(x['name'],x['url']) for x in p['renewal_sources']]
     if path=='/':entries=[(p['name'],origin+'/providers/'+p['id']+'/') for p in providers]
     elif path=='/compare/':entries=[(o['title'],origin+'/deals/'+o['id']+'/') for o in active]
     elif path=='/sources/':entries=[(p['name'],origin+'/providers/'+p['id']+'/') for p in providers]

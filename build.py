@@ -90,8 +90,17 @@ def build(base_url, local=False):
         offer_count=len(active), provider_count=len(providers),
         cloud_cards=''.join(card(o,index,money) for o in clouds) or '<p>No freshly observed cloud offers. Check provider status below.</p>',
         hosting_cards=''.join(card(o,index,money) for o in hosts) or '<p>No freshly observed hosting offers.</p>',
-        provider_rows=''.join(f'<a class="provider-row" href="/providers/{p["id"]}/"><strong>{esc(p["name"])}</strong><span>{esc(states.get(p["id"],{}).get("status","unknown").replace("_"," "))}</span><span>→</span></a>' for p in providers)) + ''.join(placements))
+        provider_rows=''.join(f'<a class="provider-row" href="/providers/{p["id"]}/"><strong>{esc(p["name"])}</strong><span>{esc(states.get(p["id"],{}).get("status","unknown").replace("_"," "))}</span><span>→</span></a>' for p in providers)) + ''.join(placements) + '<section class="prose"><h2>Renewal price evidence</h2><p><a href="/renewals/godaddy/">GoDaddy renewal coupons, prices and existing-customer discounts — official evidence</a></p></section>')
+    write('/renewals/godaddy/', 'GoDaddy Renewal Coupon, Promo Codes and Domain Renewal Prices | HostingDealsGo',
+        'Official US GoDaddy renewal prices, membership tiers, registration terms and three sourced customer reports.',
+        (ROOT / 'content/godaddy-renewal.html').read_text(encoding='utf-8'))
     for p in providers:
+        if p['id'] == 'godaddy':
+            write('/providers/godaddy/', 'GoDaddy renewal prices and source status | HostingDealsGo',
+                'Official renewal-price evidence and GoDaddy source status.',
+                '<section class="page-head"><h1>GoDaddy domain renewal evidence</h1><p><a href="/renewals/godaddy/">Read the GoDaddy renewal coupon and price guide</a></p><p>The guide separates introductory prices, renewal tiers, paid membership and customer reports.</p></section>' +
+                '<section class="prose"><h2>Source status</h2><p>The scheduled offer monitor last recorded an access problem; the guide uses a separate dated manual verification of public official pages.</p><p><a href="/sources/">View the scheduled source record</a> · <a href="/renewals/godaddy/#official-table">Official price and renewal-rule evidence</a></p></section>')
+            continue
         if p['id'] == 'namecheap':
             write('/providers/namecheap/', 'Namecheap Domain Renewal Prices vs First-Year Registration | HostingDealsGo',
                 'Verified Namecheap .com renewal pricing, first-year offers, ICANN fees and official source evidence.',
