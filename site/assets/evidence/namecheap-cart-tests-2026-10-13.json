@@ -1,0 +1,32 @@
+[
+  {
+    "code": "GHOSTSSL",
+    "result": "success",
+    "product": "Standard Wildcard SSL",
+    "term": "5 Years",
+    "currency": "USD",
+    "amount_label": "Subtotal",
+    "subtotal_before": "199.95",
+    "subtotal_after": "184.95",
+    "code_manually_entered": true,
+    "checked_at": "2026-10-13",
+    "official_cart_url": "https://www.namecheap.com/shoppingcart/",
+    "official_code_url": "https://www.namecheap.com/promos/coupons/"
+  },
+  {
+    "code": "HOST25TSEPT",
+    "result": "rejected",
+    "product": "Stellar",
+    "term": "1 Year",
+    "datacenter": "US",
+    "currency": "USD",
+    "amount_label": "Subtotal",
+    "subtotal_before": "26.88",
+    "subtotal_after": "26.88",
+    "code_manually_entered": true,
+    "checked_at": "2026-10-13",
+    "official_cart_url": "https://www.namecheap.com/shoppingcart/",
+    "response": "ERROR: This coupon has expired or has already been applied to your account(s). Unable to apply coupon code. Coupon code has already expired.",
+    "global_expiration_status": "not verified"
+  }
+]
