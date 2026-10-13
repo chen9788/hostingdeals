@@ -1,0 +1,18 @@
+{
+  "max_clicks": 3,
+  "critical_routes": [
+    "/coupons/digitalocean/",
+    "/coupons/cloudways/",
+    "/coupons/dreamhost/",
+    "/coupons/vultr/",
+    "/coupons/namecheap/",
+    "/coupons/godaddy/",
+    "/coupons/hostinger/",
+    "/coupons/bluehost/",
+    "/coupons/hostgator/",
+    "/coupons/ovhcloud/",
+    "/coupons/contabo/",
+    "/coupons/liquid-web/",
+    "/coupons/hetzner/"
+  ]
+}

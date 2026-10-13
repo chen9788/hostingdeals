@@ -52,4 +52,6 @@ if __name__=='__main__':
     origin=a.base_url or os.environ.get('SITE_URL') or json.loads((ROOT/'config/site.json').read_text())['site_url']
     if not origin:p.error('Set the actual site origin with --base-url, SITE_URL or config/site.json')
     check(origin)
+    from inspect_links import inspect
+    inspect()
 

@@ -185,7 +185,35 @@
       "/in/",
       "/uk/"
     ],
-    "affiliate_program_url": "https://www.dreamhost.com/affiliates/"
+    "affiliate_program_url": "https://www.dreamhost.com/affiliates/",
+    "coupon_page": "/coupons/dreamhost/",
+    "coupon_title": "DreamHost promo code",
+    "coupon_sources": [
+      {
+        "name": "Launch — four-year selection",
+        "url": "https://www.dreamhost.com/promo/"
+      },
+      {
+        "name": "Growth — four-year selection",
+        "url": "https://www.dreamhost.com/promo/"
+      },
+      {
+        "name": "Scale — four-year selection",
+        "url": "https://www.dreamhost.com/promo/"
+      },
+      {
+        "name": "Upfront term and included extras",
+        "url": "https://www.dreamhost.com/promo/"
+      },
+      {
+        "name": "Code eligibility and renewal",
+        "url": "https://www.dreamhost.com/legal/terms-of-service/"
+      },
+      {
+        "name": "Refund scope",
+        "url": "https://www.dreamhost.com/legal/terms-of-service/"
+      }
+    ]
   },
   {
     "id": "vultr",
@@ -217,7 +245,27 @@
       "/in/",
       "/uk/"
     ],
-    "affiliate_program_url": null
+    "affiliate_program_url": null,
+    "coupon_page": "/coupons/vultr/",
+    "coupon_title": "Vultr promo code",
+    "coupon_sources": [
+      {
+        "name": "Trial duration; amount Unconfirmed",
+        "url": "https://docs.vultr.com/platform/create-an-account"
+      },
+      {
+        "name": "Payment verification",
+        "url": "https://docs.vultr.com/platform/create-an-account"
+      },
+      {
+        "name": "Where to enter a received code",
+        "url": "https://docs.vultr.com/platform/create-an-account"
+      },
+      {
+        "name": "Charges after credits",
+        "url": "https://docs.vultr.com/platform/create-an-account"
+      }
+    ]
   },
   {
     "id": "namecheap",
@@ -696,6 +744,78 @@
       {
         "name": "Included service / membership status",
         "url": "https://contabo.com/en-us/"
+      }
+    ]
+  },
+  {
+    "id": "liquid-web",
+    "name": "Liquid Web",
+    "home": "https://www.liquidweb.com/",
+    "domains": [
+      "liquidweb.com"
+    ],
+    "category": "Cloud & VPS",
+    "offer_sources": [
+      "https://www.liquidweb.com/hosting-coupons/"
+    ],
+    "recipes": [],
+    "reject_url_markers": [],
+    "affiliate_program_url": null,
+    "note": "The dated coupon guide contains manual official-source evidence. Automated extraction is not configured; no automatic verification is claimed.",
+    "coupon_page": "/coupons/liquid-web/",
+    "coupon_title": "Liquid Web promo code",
+    "coupon_sources": [
+      {
+        "name": "Automatic checkout offer — Unconfirmed",
+        "url": "https://www.liquidweb.com/hosting-coupons/"
+      },
+      {
+        "name": "New purchases and renewals",
+        "url": "https://www.liquidweb.com/hosting-coupons/"
+      },
+      {
+        "name": "Referral benefit — duration conflict",
+        "url": "https://www.liquidweb.com/refer-a-friend/"
+      },
+      {
+        "name": "Refund baseline",
+        "url": "https://www.liquidweb.com/policies/terms-of-service/"
+      }
+    ]
+  },
+  {
+    "id": "hetzner",
+    "name": "Hetzner",
+    "home": "https://www.hetzner.com/",
+    "domains": [
+      "hetzner.com"
+    ],
+    "category": "Cloud & VPS",
+    "offer_sources": [
+      "https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/promo-code/"
+    ],
+    "recipes": [],
+    "reject_url_markers": [],
+    "affiliate_program_url": null,
+    "note": "The dated coupon guide contains manual official-source evidence. Automated extraction is not configured; no automatic verification is claimed.",
+    "coupon_page": "/coupons/hetzner/",
+    "coupon_title": "Hetzner promo code",
+    "coupon_sources": [
+      {
+        "name": "Redeem an officially supplied code",
+        "url": "https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/promo-code/"
+      },
+      {
+        "name": "Validity and product scope",
+        "url": "https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/promo-code/"
+      },
+      {
+        "name": "Account and invoice restrictions",
+        "url": "https://docs.hetzner.com/general/billing-and-account-management/billing-at-hetzner/promo-code/"
+      },
+      {
+        "name": "Old referral links — discontinued",
+        "url": "https://docs.hetzner.com/cloud/general/faq/"
       }
     ]
   }
