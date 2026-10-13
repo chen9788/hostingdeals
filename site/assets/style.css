@@ -236,3 +236,6 @@ body { color-scheme:dark; }
 ::selection { background:#6c441e; color:#fff; }
 html { scrollbar-color:#777 #202020; }
 nav a:hover { background:#333; }
+
+.cart-evidence-figure{margin:24px 0;min-width:0}
+.cart-evidence-figure img{display:block;max-width:100%;height:auto}
