@@ -30,7 +30,31 @@
       "/uk/"
     ],
     "affiliate_program_url": "https://www.digitalocean.com/affiliates",
-    "note": "The monitored trial is Agent Droplets, an AI product; it is not a general VPS credit. Core VPS promotions remain unverified."
+    "note": "The monitored trial is Agent Droplets, an AI product; it is not a general VPS credit. Core VPS promotions remain unverified.",
+    "coupon_page": "/coupons/digitalocean/",
+    "coupon_title": "DigitalOcean coupon code",
+    "coupon_sources": [
+      {
+        "name": "Automatic first-team signup credit",
+        "url": "https://docs.digitalocean.com/platform/billing/signup-credit/"
+      },
+      {
+        "name": "Promotion restrictions",
+        "url": "https://www.digitalocean.com/legal/promotional-credit-discount-terms"
+      },
+      {
+        "name": "Startup-program benefits",
+        "url": "https://www.digitalocean.com/startups"
+      },
+      {
+        "name": "After credits / ongoing billing",
+        "url": "https://docs.digitalocean.com/platform/billing/"
+      },
+      {
+        "name": "Refund policy",
+        "url": "https://docs.digitalocean.com/support/can-i-have-a-refund/"
+      }
+    ]
   },
   {
     "id": "cloudways",
@@ -522,7 +546,35 @@
       "/in/",
       "/uk/"
     ],
-    "affiliate_program_url": null
+    "affiliate_program_url": null,
+    "coupon_page": "/coupons/hostgator/",
+    "coupon_title": "HostGator promo code",
+    "coupon_sources": [
+      {
+        "name": "SNAPPY — shared / WordPress hosting",
+        "url": "https://www.hostgator.com/coupons"
+      },
+      {
+        "name": "SNAPPY — VPS / dedicated hosting",
+        "url": "https://www.hostgator.com/coupons"
+      },
+      {
+        "name": "Hosting coupon limits",
+        "url": "https://www.hostgator.com/help/article/what-is-the-best-coupon-code-for-me"
+      },
+      {
+        "name": "Included first-year domain",
+        "url": "https://www.hostgator.com/coupons"
+      },
+      {
+        "name": "Refund eligibility",
+        "url": "https://www.hostgator.com/help/article/how-do-i-get-the-30-day-money-back-refund"
+      },
+      {
+        "name": "Account eligibility — Unconfirmed",
+        "url": "https://www.hostgator.com/tos"
+      }
+    ]
   },
   {
     "id": "kinsta",
@@ -558,5 +610,93 @@
       "/uk/"
     ],
     "affiliate_program_url": "https://kinsta.com/affiliates/"
+  },
+  {
+    "id": "ovhcloud",
+    "name": "OVHcloud",
+    "home": "https://us.ovhcloud.com/",
+    "domains": [
+      "ovhcloud.com"
+    ],
+    "category": "Cloud & VPS",
+    "offer_sources": [
+      "https://us.ovhcloud.com/deals/"
+    ],
+    "recipes": [],
+    "reject_url_markers": [],
+    "affiliate_program_url": null,
+    "note": "The dated coupon guide contains manual official-source evidence. Automated offer extraction is not configured for this provider; no automatic verification is claimed.",
+    "coupon_page": "/coupons/ovhcloud/",
+    "coupon_title": "OVHcloud promo code",
+    "coupon_sources": [
+      {
+        "name": "Public Cloud credit — no code",
+        "url": "https://us.ovhcloud.com/deals/"
+      },
+      {
+        "name": "First Managed Database credit",
+        "url": "https://us.ovhcloud.com/deals/"
+      },
+      {
+        "name": "Credits and later bills",
+        "url": "https://us.ovhcloud.com/deals/"
+      },
+      {
+        "name": "Startup-program benefits",
+        "url": "https://us.ovhcloud.com/startup-program/program-benefits/"
+      },
+      {
+        "name": "Renewal and refunds",
+        "url": "https://us.ovhcloud.com/legal/terms-of-service/"
+      },
+      {
+        "name": "VCFTRIAL — expired",
+        "url": "https://us.ovhcloud.com/press/press-releases/2026/ovhcloud-us-launches-public-vcf-as-a-service-powered-by-vmware-cloud-foundation/"
+      }
+    ]
+  },
+  {
+    "id": "contabo",
+    "name": "Contabo",
+    "home": "https://contabo.com/en-us/",
+    "domains": [
+      "contabo.com"
+    ],
+    "category": "Cloud & VPS",
+    "offer_sources": [
+      "https://contabo.com/en-us/"
+    ],
+    "recipes": [],
+    "reject_url_markers": [],
+    "affiliate_program_url": null,
+    "note": "The dated coupon guide contains manual official-source evidence. Automated offer extraction is not configured for this provider; no automatic verification is claimed.",
+    "coupon_page": "/coupons/contabo/",
+    "coupon_title": "Contabo promo code",
+    "coupon_sources": [
+      {
+        "name": "Core VPS introductory display",
+        "url": "https://contabo.com/en-us/"
+      },
+      {
+        "name": "Other displayed introductory plans",
+        "url": "https://contabo.com/en-us/"
+      },
+      {
+        "name": "Contract extension and later price",
+        "url": "https://contabo.com/en-us/legal/terms-and-conditions/"
+      },
+      {
+        "name": "Private-account revocation",
+        "url": "https://help.contabo.com/en/support/solutions/articles/103000327514-can-i-get-a-refund-"
+      },
+      {
+        "name": "Recent renewal refund request",
+        "url": "https://help.contabo.com/en/support/solutions/articles/103000327514-can-i-get-a-refund-"
+      },
+      {
+        "name": "Included service / membership status",
+        "url": "https://contabo.com/en-us/"
+      }
+    ]
   }
 ]
