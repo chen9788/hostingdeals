@@ -10,7 +10,7 @@ An English-language official-source index for hosting, cloud and VPS offers. Eve
 - Daily GitHub Actions fetch → deterministic parsing → JSON → static HTML → validation → commit.
 - Cloudflare Pages Git integration builds and deploys when the repository changes.
 - No user-managed API key. GitHub supplies its short-lived `GITHUB_TOKEN` for commits; Pages requires a one-time GitHub app authorization. Those are account authorizations, not inference keys.
-- No Functions, Worker runtime, database, server, analytics or application cookies.
+- No Functions, Worker runtime, database or server. This site uses Google Analytics 4 (GA4) for traffic statistics. GA4 uses first-party cookies: `_ga` to distinguish users and `_ga_<container-id>` to persist session state. Browser settings or blocking tools may prevent these cookies from being set.
 
 ## Files
 
@@ -86,7 +86,7 @@ The free evidence CSV and change log are useful outputs, not fake lead magnets. 
 
 ### Eventual asset sale
 
-Track real analytics and revenue only after choosing and disclosing a lawful measurement system. Preserve repository history, source provenance, approved program agreements and reproducible builds for buyer due diligence. Platform accounts and affiliate approvals may require reapplication or provider consent on transfer. No sale valuation or income is promised.
+GA4 is enabled for traffic statistics, as described in the site's Disclosure & privacy notice. Record only verified analytics and revenue. Preserve repository history, source provenance, approved program agreements and reproducible builds for buyer due diligence. Platform accounts and affiliate approvals may require reapplication or provider consent on transfer. No sale valuation or income is promised.
 
 ## Useful content and links
 
