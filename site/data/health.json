@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T00:07:22+00:00",
+  "generated_at": "2026-10-16T07:06:30+00:00",
   "observed_offers": 10,
   "provider_status": {
     "digitalocean": "ok",
@@ -10,7 +10,7 @@
     "namecheap": "unavailable",
     "godaddy": "unavailable",
     "hostinger": "ok",
-    "siteground": "no_extractable_offer",
+    "siteground": "unavailable",
     "bluehost": "robots_unavailable_or_disallowed",
     "hostgator": "robots_unavailable_or_disallowed",
     "kinsta": "ok",
