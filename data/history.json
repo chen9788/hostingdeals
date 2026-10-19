@@ -138,5 +138,89 @@
       "valid_until": null
     },
     "source_url": "https://kinsta.com/docs/billing/wordpress-hosting-plans/"
+  },
+  {
+    "observed_at": "2026-10-19T13:35:10+00:00",
+    "offer_id": "hostinger-premium",
+    "title": "Hostinger Premium",
+    "before": {
+      "status": "observed",
+      "price_text": "$ 2.99 /mo",
+      "renewal_text": "$10.99/mo",
+      "discount_text": "75% off",
+      "benefit_text": null,
+      "term_text": "48 months",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "after": {
+      "status": "observed",
+      "price_text": "$ 2.49 /mo",
+      "renewal_text": "$10.99/mo",
+      "discount_text": "80% off",
+      "benefit_text": null,
+      "term_text": "48 months",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "source_url": "https://www.hostinger.com/pricing"
+  },
+  {
+    "observed_at": "2026-10-19T13:35:10+00:00",
+    "offer_id": "hostinger-unlimited",
+    "title": "Hostinger Unlimited",
+    "before": {
+      "status": "observed",
+      "price_text": "$ 3.99 /mo",
+      "renewal_text": "$16.99/mo",
+      "discount_text": "79% off",
+      "benefit_text": null,
+      "term_text": "48 months",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "after": {
+      "status": "observed",
+      "price_text": "$ 3.49 /mo",
+      "renewal_text": "$16.99/mo",
+      "discount_text": "82% off",
+      "benefit_text": null,
+      "term_text": "48 months",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "source_url": "https://www.hostinger.com/pricing"
+  },
+  {
+    "observed_at": "2026-10-19T13:35:10+00:00",
+    "offer_id": "cloudways-hosting-promotion",
+    "title": "Cloudways introductory hosting discount",
+    "before": {
+      "status": "observed",
+      "price_text": null,
+      "renewal_text": "Once the promotional period ends, standard pricing applies.",
+      "discount_text": "40% off",
+      "benefit_text": null,
+      "term_text": "4 months",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "after": {
+      "status": "unavailable",
+      "price_text": null,
+      "renewal_text": "Once the promotional period ends, standard pricing applies.",
+      "discount_text": "40% off",
+      "benefit_text": null,
+      "term_text": "4 months",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "source_url": "https://www.cloudways.com/en/promo-code.php"
   }
 ]
