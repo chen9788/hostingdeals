@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Billing-cycle timing: rules and evidence</title>
+<desc id="desc">Official guide reviewed October 20, 2026: manual renewal with payment takes effect immediately; auto-renewal period change applies at the next renewal. Account test not verified. October 13 registration cart Total changed from $40.59 to $36.59 with HADOMAINS.</desc>
+<rect width="960" height="540" fill="#f4f1e9"/>
+<g font-family="Arial, sans-serif" fill="#182b26">
+<text x="42" y="57" font-size="30" font-weight="700">When does the new billing cycle apply?</text>
+<text x="42" y="88" font-size="17">Official guide reviewed 2026-10-20 · Actual account switch: not verified</text>
+<path d="M42 113H918" stroke="#a5b3aa"/>
+<text x="42" y="160" font-size="22" font-weight="700">Manual renewal</text>
+<text x="42" y="190" font-size="18">Select period + complete payment</text>
+<path d="M443 168H565m-14-9 14 9-14 9" stroke="#32634c" stroke-width="3" fill="none"/>
+<text x="598" y="160" font-size="24" font-weight="700">Immediately</text>
+<text x="598" y="190" font-size="18">Documented rule</text>
+<path d="M42 222H918" stroke="#c7cfc6"/>
+<text x="42" y="266" font-size="22" font-weight="700">Auto-renewal enabled</text>
+<text x="42" y="296" font-size="18">Change billing period setting</text>
+<path d="M443 274H565m-14-9 14 9-14 9" stroke="#32634c" stroke-width="3" fill="none"/>
+<text x="598" y="266" font-size="24" font-weight="700">Next renewal</text>
+<text x="598" y="296" font-size="18">Documented rule</text>
+<rect x="32" y="329" width="896" height="166" rx="10" fill="#e2e9df"/>
+<text x="53" y="365" font-size="21" font-weight="700">A different test: HADOMAINS registration cart</text>
+<text x="53" y="398" font-size="19">.com · 3 years · Total $40.59 → $36.59 · Tested 2026-10-13</text>
+<text x="53" y="430" font-size="18">This signed-out registration test does not verify a billing-cycle switch.</text>
+<text x="53" y="464" font-size="18" font-weight="700">Account effective date, renewal Total and coupon eligibility: not verified</text>
+<text x="42" y="523" font-size="14">HostingDealsGo · Original evidence map, not a checkout screenshot · Sources linked in the article</text>
+</g></svg>
