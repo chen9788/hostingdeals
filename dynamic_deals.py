@@ -33,6 +33,21 @@ def parse(brand, text, url, now):
     compact = ' '.join(text.split())
     offers = []
     if brand == 'hostinger':
+        # Match a single rendered plan block, so a headline discount cannot be
+        # misrepresented as the incremental saving from entering a coupon.
+        plan_pattern = (r'(?P<discount>\d+% off)\s*\n(?P<product>Premium|Unlimited|Cloud Startup)\n'
+                        r'(?:(?!\n(?:Premium|Unlimited|Cloud Startup)\n).){0,450}?'
+                        r"'(?P<code>COUPONSPAGE)' coupon applied\s*\nUse coupon\s*\n"
+                        r'(?P<terms>Get \d+ months for [^\n]+)')
+        for m in re.finditer(plan_pattern, text, re.S):
+            offers.append({'brand': brand, 'code': m['code'], 'product': m['product'],
+                'discount': m['discount'] + ' — displayed plan discount, not incremental code savings',
+                'terms': m['terms'], 'valid_until': None,
+                'expiry_note': 'not verified — no fixed deadline captured',
+                'source_url': url, 'checked_at': now, 'status': 'officially_observed',
+                'checkout_status': 'not verified',
+                'evidence': m['discount'] + ' / ' + m['product'] + " / 'COUPONSPAGE' coupon applied / " + m['terms']})
+        if offers: return offers
         # Deliberately tied to the official coupon instruction, not arbitrary uppercase words.
         patterns = [r'(?:coupon code|code)\s*[:\-]?\s*(?P<code>COUPONSPAGE)\b.{0,180}?(?P<discount>\d+%\s*(?:off|discount))',
                     r'(?P<discount>\d+%\s*(?:off|discount)).{0,180}?(?:coupon code|code)\s*[:\-]?\s*(?P<code>COUPONSPAGE)\b']
@@ -60,7 +75,9 @@ def render(brand, now):
         deadline = min(dt.datetime.fromisoformat(item['checked_at']) + dt.timedelta(hours=48),
                        dt.datetime.fromisoformat(until) if until else dt.datetime.max.replace(tzinfo=dt.timezone.utc))
         cards.append('<article class="notice dynamic-offer" data-hide-at="' + esc(deadline.isoformat()) + '">'
-            '<h3><code>' + esc(item['code']) + '</code> · ' + esc(item['discount']) + '</h3>'
+            '<h3><code>' + esc(item['code']) + '</code>' + (' · ' + esc(item['product']) if item.get('product') else '') + '</h3>'
+            '<p>' + esc(item['discount']) + '</p>'
+            + ('<p>' + esc(item['terms']) + '</p>' if item.get('terms') else '') +
             '<p>Officially published; checkout eligibility: <strong>not verified</strong>.</p>'
             '<p>Valid until: ' + esc(until or item['expiry_note']) + '</p>'
             '<p>Official check: <time>' + esc(item['checked_at']) + '</time> · '

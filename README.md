@@ -6,7 +6,7 @@ An English-language official-source index for hosting, cloud and VPS offers. Eve
 
 ## Runtime
 
-- Python 3.12 standard library only; no pip install, JavaScript execution, inference calls or paid APIs.
+- The original HTTP monitor and static build use Python 3.12's standard library. The separate brand coupon monitor uses Playwright 1.55.0 and branded Google Chrome with `headless=False`, on an Xvfb graphical display in GitHub Actions. No paid API or merchant login is used.
 - Daily GitHub Actions fetch → deterministic parsing → JSON → static HTML → validation → commit.
 - Cloudflare Pages Git integration builds and deploys when the repository changes.
 - No user-managed API key. GitHub supplies its short-lived `GITHUB_TOKEN` for commits; Pages requires a one-time GitHub app authorization. Those are account authorizations, not inference keys.
@@ -15,6 +15,8 @@ An English-language official-source index for hosting, cloud and VPS offers. Eve
 ## Files
 
 `scraper.py` monitors official allowlisted pages and advertised robots/sitemaps/feeds. `config/providers.json` contains reviewed source URLs and extraction rules. `data/offers.json` is replaced atomically at each update; `data/history.json` records substantive changes. `build.py` renders `templates/` to `site/`. `validate.py` checks routes, UTF-8, sitemap origins and evidence. `.github/workflows/update.yml` commits data and output daily at 06:23 UTC.
+
+The independent `collect_dynamic.py` monitor reads rendered official pages in headed Google Chrome, daily at 06:47 UTC (`.github/workflows/dynamic-deals.yml`) and on relevant source changes. `config/dynamic-deals.json` gates pilot/rollout brands. Records go only to the existing brand coupon pages, never to new deal URLs or homepage content. `data/dynamic-deals.json` records official publication separately from checkout verification. Unknown expiry is explicit; known elapsed deadlines and records older than 48 hours are excluded on build and hidden in an open browser by `assets/dynamic-deals.js`. Failed collection replaces the current layer with an honest empty/not-verified state, without rewriting historical cart evidence or classifying a code as permanently invalid. Raw rendered text/screenshots remain in the 30-day workflow artifact. This schedule can be delayed by GitHub; consult the attempt time and workflow result. Collector credentials are not required; no account cookies or authentication files are saved.
 
 ## Run locally
 

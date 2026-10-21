@@ -3,6 +3,7 @@ import datetime as dt
 import hashlib
 import json
 import re
+import urllib.robotparser
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 from dynamic_deals import ROOT, official, parse
@@ -27,6 +28,19 @@ def main():
                 else: route.continue_()
             page.route('**/*', route_document)
             try:
+                source = config['sources'][brand]
+                from urllib.parse import urlsplit
+                origin = urlsplit(source)
+                robots_response = page.goto(origin.scheme + '://' + origin.netloc + '/robots.txt', wait_until='domcontentloaded', timeout=30000)
+                if robots_response and robots_response.status == 200:
+                    robots_text = page.locator('body').inner_text()
+                    robot = urllib.robotparser.RobotFileParser()
+                    robot.parse(robots_text.splitlines())
+                    if not robot.can_fetch('*', source):
+                        raise RuntimeError('robots disallowed')
+                elif not robots_response or robots_response.status != 404:
+                    raise RuntimeError('robots unavailable')
+                state['robots'] = 'permitted'
                 response = page.goto(config['sources'][brand], wait_until='domcontentloaded', timeout=60000)
                 page.locator('body').wait_for()
                 # Await the rendered coupon instruction, but retain failures as evidence.
