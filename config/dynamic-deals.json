@@ -1,5 +1,5 @@
 {
-  "enabled": ["hostinger"],
+  "enabled": ["hostinger", "namecheap", "godaddy"],
   "sources": {
     "hostinger": "https://www.hostinger.com/coupons",
     "namecheap": "https://www.namecheap.com/promos/coupons/",

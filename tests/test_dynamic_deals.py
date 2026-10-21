@@ -36,4 +36,10 @@ class DynamicRules(unittest.TestCase):
         self.assertFalse(parse('hostinger', 'COUPONSPAGE 90% off', url, NOW.isoformat()))
         self.assertFalse(parse('hostinger', 'Access denied Use code COUPONSPAGE for 10% off', url, NOW.isoformat()))
 
+    def test_plan_discount_stays_with_its_product(self):
+        text = "81% off\nPremium\nDescription\n'COUPONSPAGE' coupon applied\nUse coupon\nGet 48 months for $113.76.\n83% off\nUnlimited\nDescription\n'COUPONSPAGE' coupon applied\nUse coupon\nGet 48 months for $159.36."
+        offers = parse('hostinger', text, 'https://www.hostinger.com/coupons', NOW.isoformat())
+        self.assertEqual([(o['product'], o['discount'].split(' ')[0]) for o in offers], [('Premium', '81%'), ('Unlimited', '83%')])
+        self.assertTrue(all('not incremental' in o['discount'] for o in offers))
+
 if __name__ == '__main__': unittest.main()
