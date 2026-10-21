@@ -14,6 +14,7 @@ from string import Template
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 from structured_data import render as structured_data
+from dynamic_deals import render as dynamic_layer
 
 ROOT = Path(__file__).resolve().parent
 def esc(value): return html.escape(str(value or ''), quote=True)
@@ -71,6 +72,12 @@ def build(base_url, local=False):
     routes = []
     schema_history = load('data/history.json') if (ROOT/'data/history.json').exists() else []
     def write(path, title, description, body, noindex=False):
+        for brand in ('hostinger', 'namecheap', 'godaddy'):
+            if path == '/coupons/' + brand + '/':
+                layer = dynamic_layer(brand, now)
+                if layer:
+                    head_end = body.index('</h1>') + len('</h1>')
+                    body = body[:head_end] + layer + body[head_end:]
         for provider in providers:
             if path == '/providers/'+provider['id']+'/' and provider.get('coupon_page'):
                 body += '<section class="prose"><h2>Official coupon and promo evidence</h2><p><a href="'+provider['coupon_page']+'">'+esc(provider['coupon_title'])+'</a></p></section>'
@@ -161,6 +168,8 @@ def build(base_url, local=False):
     write('/about/','About HostingDealsGo | HostingDealsGo','An independent index of official hosting offers.', '<section class="page-head"><p class="eyebrow">HostingDealsGo</p><h1>Spend less time decoding the deal.</h1><p>We put the introductory offer, renewal context and source evidence in one place.</p></section><div class="prose"><p>Independent, newly launched, and focused on official hosting, cloud and VPS offers. We make no claims of operating history, special partnerships or checkout tests we have not performed.</p><h2>Official partner programs</h2><p>These links document public programs. A listing is not approval or an active partnership.</p><ul>'+program_list+'</ul></div>')
     shutil.copytree(ROOT / 'assets',site / 'assets')
     (site/'data').mkdir(); (site/'data/offers.json').write_text(json.dumps(dataset,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+    dynamic_path = ROOT / 'data/dynamic-deals.json'
+    if dynamic_path.exists(): shutil.copyfile(dynamic_path, site / 'data/dynamic-deals.json')
     (site/'data/health.json').write_text(json.dumps(load('data/health.json'),indent=2)+'\n',encoding='utf-8')
     (site/'data/history.json').write_text(json.dumps(history,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     export=io.StringIO(); writer=csv.writer(export); fields=['provider','title','price_text','discount_text','term_text','renewal_text','valid_until','checked_at','source_url']
