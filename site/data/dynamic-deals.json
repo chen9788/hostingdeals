@@ -4,7 +4,7 @@
   "requested_locale": "en-US",
   "sources": {
     "hostinger": {
-      "checked_at": "2026-10-21T07:30:43+00:00",
+      "checked_at": "2026-10-21T07:32:34+00:00",
       "source_url": "https://www.hostinger.com/coupons",
       "status": "officially_observed",
       "robots": "permitted",
@@ -14,23 +14,23 @@
       "offers": 3
     },
     "namecheap": {
-      "checked_at": "2026-10-21T07:30:47+00:00",
+      "checked_at": "2026-10-21T07:32:39+00:00",
       "source_url": "https://www.namecheap.com/promos/coupons/",
-      "status": "officially_observed",
+      "status": "not verified — official source returned HTTP 403",
       "robots": "permitted",
       "final_url": "https://www.namecheap.com/promos/coupons/",
-      "http_status": 200,
-      "text_sha256": "6480a7c8f07b2aa0079d690ea43e7a456435ddd3424dc218a1eb5b454f24df39",
-      "offers": 3
+      "http_status": 403,
+      "text_sha256": "32f1c0af8ba0d7d580becc5792d0fb1c62f915f65717dd5013f4ab549db04776",
+      "offers": 0
     },
     "godaddy": {
-      "checked_at": "2026-10-21T07:30:49+00:00",
+      "checked_at": "2026-10-21T07:32:49+00:00",
       "source_url": "https://www.godaddy.com/promos/coupon-promo-codes",
       "status": "not verified — official source returned HTTP 403",
       "robots": "permitted",
       "final_url": "https://www.godaddy.com/",
       "http_status": 403,
-      "text_sha256": "381c893e564a559d4b86982903d43ea274f15d49b02efcdef1f2f9fcc9b79be4",
+      "text_sha256": "c7cd95c863240cfe74a629535051d3243af4f5e0024da0ecfc6795f691f96496",
       "offers": 0
     }
   },
@@ -44,7 +44,7 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-10-21T07:30:43+00:00",
+      "checked_at": "2026-10-21T07:32:34+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "81% off / Premium / 'COUPONSPAGE' coupon applied / Get 48 months for $113.76 (regular price $585.12). Renews at $10.99/mo."
@@ -58,7 +58,7 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-10-21T07:30:43+00:00",
+      "checked_at": "2026-10-21T07:32:34+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "83% off / Unlimited / 'COUPONSPAGE' coupon applied / Get 48 months for $159.36 (regular price $911.52). Renews at $16.99/mo."
@@ -72,62 +72,11 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-10-21T07:30:43+00:00",
+      "checked_at": "2026-10-21T07:32:34+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "73% off / Cloud Startup / 'COUPONSPAGE' coupon applied / Get 48 months for $364.32 (regular price $1,343.52). Renews at $25.99/mo."
-    },
-    {
-      "brand": "namecheap",
-      "product": "Domain registration / transfer",
-      "code": "GHOSTDOT",
-      "discount": "Discounted registration and transfer",
-      "terms": "Promotional price applies to first-year registrations and transfers only and is not applicable for premium or aftermarket domains. Prices vary by TLD; see the official table.",
-      "source_start_date": "2026-10-01",
-      "source_end_date": "2026-10-31",
-      "valid_until": null,
-      "withdraw_at": "2026-10-31T00:00:00+00:00",
-      "expiry_note": "Valid October 1 - October 31, 2026; timezone not verified. Conservatively removed at 00:00 UTC on the listed end date; while supplies last.",
-      "source_url": "https://www.namecheap.com/promos/coupons/",
-      "checked_at": "2026-10-21T07:30:47+00:00",
-      "status": "officially_observed",
-      "checkout_status": "not verified",
-      "evidence": "Discounted registration and transfer / GHOSTDOT / Valid October 1 - October 31, 2026"
-    },
-    {
-      "brand": "namecheap",
-      "product": "Professional Business Email",
-      "code": "GHOSTPE",
-      "discount": "Up to 40% off all plans - Professional Business Email",
-      "terms": "Discount varies by plan and billing period; see the official table.",
-      "source_start_date": "2026-10-01",
-      "source_end_date": "2026-10-31",
-      "valid_until": null,
-      "withdraw_at": "2026-10-31T00:00:00+00:00",
-      "expiry_note": "Valid October 1 - October 31, 2026; timezone not verified. Conservatively removed at 00:00 UTC on the listed end date; while supplies last.",
-      "source_url": "https://www.namecheap.com/promos/coupons/",
-      "checked_at": "2026-10-21T07:30:47+00:00",
-      "status": "officially_observed",
-      "checkout_status": "not verified",
-      "evidence": "Up to 40% off all plans - Professional Business Email / GHOSTPE / Valid October 1 - October 31, 2026"
-    },
-    {
-      "brand": "namecheap",
-      "product": "Standard Wildcard SSL",
-      "code": "GHOSTSSL",
-      "discount": "Up to 21% off Standard Wildcard SSL - SSL Security",
-      "terms": "Price varies by certificate duration; see the official table.",
-      "source_start_date": "2026-10-01",
-      "source_end_date": "2026-10-31",
-      "valid_until": null,
-      "withdraw_at": "2026-10-31T00:00:00+00:00",
-      "expiry_note": "Valid October 1 - October 31, 2026; timezone not verified. Conservatively removed at 00:00 UTC on the listed end date; while supplies last.",
-      "source_url": "https://www.namecheap.com/promos/coupons/",
-      "checked_at": "2026-10-21T07:30:47+00:00",
-      "status": "officially_observed",
-      "checkout_status": "not verified",
-      "evidence": "Up to 21% off Standard Wildcard SSL - SSL Security / GHOSTSSL / Valid October 1 - October 31, 2026"
     }
   ],
-  "browser_version": "155.0.8059.84"
+  "browser_version": "155.0.8059.39"
 }
