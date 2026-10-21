@@ -1,5 +1,17 @@
 {
   "schema_version": 1,
-  "sources": {},
-  "offers": []
+  "mode": "Google Chrome headed (Xvfb virtual display on CI)",
+  "sources": {
+    "hostinger": {
+      "checked_at": "2026-10-21T07:24:02+00:00",
+      "source_url": "https://www.hostinger.com/coupons",
+      "status": "not verified — no matching official code captured",
+      "final_url": "https://www.hostinger.com/coupons",
+      "http_status": 200,
+      "text_sha256": "30c9d55baa07b8830ff8834be6695a8f681be4c4e407863b8ab3f92fd2a00c80",
+      "offers": 0
+    }
+  },
+  "offers": [],
+  "browser_version": "155.0.8059.39"
 }
