@@ -57,4 +57,10 @@ class DynamicRules(unittest.TestCase):
         self.assertTrue(current(item, NOW))
         self.assertFalse(parse('namecheap', text.replace('first-year', 'all-year'), item['source_url'], NOW.isoformat()))
 
+    def test_godaddy_requires_explicit_same_line_association(self):
+        url = 'https://www.godaddy.com/promos/coupon-promo-codes'
+        self.assertEqual(parse('godaddy', 'Use promo code: TESTONLY for 10% off eligible new products.', url, NOW.isoformat())[0]['code'], 'TESTONLY')
+        self.assertFalse(parse('godaddy', 'TESTONLY\n10% off somewhere else', url, NOW.isoformat()))
+        self.assertFalse(parse('godaddy', 'Use promo code: TESTONLY for 10% off expired', url, NOW.isoformat()))
+
 if __name__ == '__main__': unittest.main()

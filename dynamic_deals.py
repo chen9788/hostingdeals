@@ -34,6 +34,20 @@ def parse(brand, text, url, now):
     if re.search(r'just a moment|verify you are human|access denied|captcha', text, re.I): return []
     compact = ' '.join(text.split())
     offers = []
+    if brand == 'godaddy':
+        # With no reviewed readable card layout, only a self-contained official
+        # instruction can qualify. A percentage elsewhere on the page is insufficient.
+        pattern = (r'(?m)^(?i:Use|Apply) (?i:(?:coupon |promo )?code):? +'
+                   r'(?P<code>[A-Z0-9_-]{3,40}) (?i:for|to get) '
+                   r'(?P<discount>\d+%(?i: off| discount))(?P<scope>[^\n]{0,120})$')
+        for m in re.finditer(pattern, text):
+            if re.search(r'expired|no longer|ended|expires|until|valid through', m.group(0), re.I): continue
+            offers.append({'brand': brand, 'code': m['code'], 'discount': m['discount'],
+                'terms': m['scope'].strip() or 'Product/account eligibility not verified; check official terms.',
+                'valid_until': None, 'expiry_note': 'not verified — no fixed deadline captured',
+                'source_url': url, 'checked_at': now, 'status': 'officially_observed',
+                'checkout_status': 'not verified', 'evidence': m.group(0)})
+        return offers
     if brand == 'namecheap':
         dates = re.search(r'Valid ([A-Za-z]+ \d+) - ([A-Za-z]+ \d+, \d{4})', compact)
         restriction = 'Promotional price applies to first-year registrations and transfers only and is not applicable for premium or aftermarket domains.'
