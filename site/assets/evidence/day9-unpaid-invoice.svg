@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
+<title id="title">Unpaid renewal invoice: documented rule and evidence boundary</title>
+<desc id="desc">Official documents reviewed October 21, 2026 place payment before a billing-period change for the documented renewal invoices. Account operation is not verified. The October 13 HADOMAINS test was a new registration: Total $40.59 to $36.59.</desc>
+<rect width="960" height="500" fill="#f4f1e9"/>
+<g font-family="Arial, sans-serif" fill="#182b26">
+<text x="42" y="55" font-size="29" font-weight="700">An unpaid renewal invoice is a different scenario</text>
+<text x="42" y="88" font-size="18">Official review: 2026-10-21 · Account operation: not verified</text>
+<path d="M42 112H918" stroke="#a5b3aa"/>
+<text x="42" y="155" font-size="22" font-weight="700">Documented prerequisite</text>
+<text x="42" y="190" font-size="20">Pending renewal invoice</text>
+<path d="M333 183H389m-12-8 12 8-12 8" stroke="#32634c" stroke-width="3" fill="none"/>
+<text x="411" y="190" font-size="20" font-weight="700">Payment first</text>
+<path d="M583 183H639m-12-8 12 8-12 8" stroke="#32634c" stroke-width="3" fill="none"/>
+<text x="662" y="190" font-size="20">Period change</text>
+<text x="42" y="226" font-size="17">Public guide ≠ an observed operation in our own account</text>
+<rect x="32" y="255" width="896" height="188" rx="10" fill="#e2e9df"/>
+<text x="53" y="293" font-size="23" font-weight="700">What our historical cart actually tested</text>
+<text x="53" y="330" font-size="21">HADOMAINS · .com new registration · 3 years</text>
+<text x="53" y="367" font-size="25" font-weight="700">Total $40.59 → $36.59</text>
+<text x="53" y="405" font-size="18">Tested 2026-10-13 · Does not verify an unpaid-invoice operation</text>
+<text x="42" y="477" font-size="16">HostingDealsGo · Original evidence map, not a checkout screenshot · Sources linked in the article</text>
+</g></svg>
