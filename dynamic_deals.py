@@ -22,6 +22,8 @@ def current(item, now):
         if item.get('status') != 'officially_observed': return False
         if not re.fullmatch(r'[A-Z0-9_-]{3,40}', item['code']): return False
         if item.get('valid_until') and now >= dt.datetime.fromisoformat(item['valid_until']): return False
+        if item.get('withdraw_at') and now >= dt.datetime.fromisoformat(item['withdraw_at']): return False
+        if item.get('source_start_date') and now.date() < dt.date.fromisoformat(item['source_start_date']): return False
         return True
     except (ValueError, KeyError, TypeError):
         return False
@@ -32,6 +34,29 @@ def parse(brand, text, url, now):
     if re.search(r'just a moment|verify you are human|access denied|captcha', text, re.I): return []
     compact = ' '.join(text.split())
     offers = []
+    if brand == 'namecheap':
+        dates = re.search(r'Valid ([A-Za-z]+ \d+) - ([A-Za-z]+ \d+, \d{4})', compact)
+        restriction = 'Promotional price applies to first-year registrations and transfers only and is not applicable for premium or aftermarket domains.'
+        if not dates or restriction not in compact: return []
+        try:
+            end = dt.datetime.strptime(dates[2], '%B %d, %Y').date()
+            start = dt.datetime.strptime(dates[1] + ', ' + str(end.year), '%B %d, %Y').date()
+        except ValueError: return []
+        recipes = [
+            ('Domain registration / transfer', r'(Discounted registration and transfer)\nSee details below\n([A-Z0-9_-]{3,40})\nRegister domain', restriction + ' Prices vary by TLD; see the official table.'),
+            ('Professional Business Email', r'(Up to \d+% off all plans - Professional Business Email)\nSee details below\n([A-Z0-9_-]{3,40})\nGet email', 'Discount varies by plan and billing period; see the official table.'),
+            ('Standard Wildcard SSL', r'(Up to \d+% off Standard Wildcard SSL - SSL Security)\nSee details below\n([A-Z0-9_-]{3,40})\nSecure your site', 'Price varies by certificate duration; see the official table.')]
+        for product, pattern, terms in recipes:
+            m = re.search(pattern, text)
+            if not m: continue
+            offers.append({'brand': brand, 'product': product, 'code': m[2], 'discount': m[1],
+                'terms': terms, 'source_start_date': start.isoformat(), 'source_end_date': end.isoformat(),
+                'valid_until': None,
+                'withdraw_at': dt.datetime.combine(end, dt.time(), tzinfo=dt.timezone.utc).isoformat(),
+                'expiry_note': dates.group(0) + '; timezone not verified. Conservatively removed at 00:00 UTC on the listed end date; while supplies last.',
+                'source_url': url, 'checked_at': now, 'status': 'officially_observed',
+                'checkout_status': 'not verified', 'evidence': ' / '.join([m[1], m[2], dates.group(0)])})
+        return offers
     if brand == 'hostinger':
         # Match a single rendered plan block, so a headline discount cannot be
         # misrepresented as the incremental saving from entering a coupon.
@@ -73,13 +98,14 @@ def render(brand, now):
         if item.get('brand') != brand or not current(item, now): continue
         until = item.get('valid_until')
         deadline = min(dt.datetime.fromisoformat(item['checked_at']) + dt.timedelta(hours=48),
-                       dt.datetime.fromisoformat(until) if until else dt.datetime.max.replace(tzinfo=dt.timezone.utc))
+                       dt.datetime.fromisoformat(until) if until else dt.datetime.max.replace(tzinfo=dt.timezone.utc),
+                       dt.datetime.fromisoformat(item['withdraw_at']) if item.get('withdraw_at') else dt.datetime.max.replace(tzinfo=dt.timezone.utc))
         cards.append('<article class="notice dynamic-offer" data-hide-at="' + esc(deadline.isoformat()) + '">'
             '<h3><code>' + esc(item['code']) + '</code>' + (' · ' + esc(item['product']) if item.get('product') else '') + '</h3>'
             '<p>' + esc(item['discount']) + '</p>'
             + ('<p>' + esc(item['terms']) + '</p>' if item.get('terms') else '') +
             '<p>Officially published; checkout eligibility: <strong>not verified</strong>.</p>'
-            '<p>Valid until: ' + esc(until or item['expiry_note']) + '</p>'
+            '<p>Validity: ' + esc(item.get('expiry_note') or until or 'not verified') + '</p>'
             '<p>Official check: <time>' + esc(item['checked_at']) + '</time> · '
             '<a href="' + esc(item['source_url']) + '" rel="noopener noreferrer">Official source</a></p></article>')
     return ('<section class="prose" id="current-deals"><p class="eyebrow">OFFICIAL SOURCE MONITOR</p>'

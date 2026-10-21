@@ -12,7 +12,7 @@ def main():
     config = json.loads((ROOT / 'config/dynamic-deals.json').read_text())
     evidence = ROOT / 'work/dynamic-evidence'
     evidence.mkdir(parents=True, exist_ok=True)
-    result = {'schema_version': 1, 'mode': 'Google Chrome headed (Xvfb virtual display on CI)', 'sources': {}, 'offers': []}
+    result = {'schema_version': 1, 'mode': 'Google Chrome headed (Xvfb virtual display on CI)', 'requested_locale': 'en-US', 'sources': {}, 'offers': []}
     with sync_playwright() as p:
         browser = p.chromium.launch(channel='chrome', headless=False)
         context = browser.new_context(locale='en-US', viewport={'width': 1440, 'height': 1000})
@@ -42,6 +42,8 @@ def main():
                     raise RuntimeError('robots unavailable')
                 state['robots'] = 'permitted'
                 response = page.goto(config['sources'][brand], wait_until='domcontentloaded', timeout=60000)
+                if re.search(r'/(?:en-in|en-gb|en-au|in|uk|eu)/|https://eu\.', page.url, re.I):
+                    raise RuntimeError('region-mismatch redirect; no offer published')
                 page.locator('body').wait_for()
                 # Await the rendered coupon instruction, but retain failures as evidence.
                 try: page.get_by_text(re.compile(r'COUPONSPAGE|coupon|promo', re.I)).first.wait_for(timeout=10000)
@@ -54,12 +56,14 @@ def main():
                 found = parse(brand, text, page.url, now) if response and response.status == 200 else []
                 result['offers'].extend(found)
                 state['status'] = 'officially_observed' if found else 'not verified — no matching official code captured'
+                if response and response.status != 200:
+                    state['status'] = 'not verified — official source returned HTTP ' + str(response.status)
                 state['offers'] = len(found)
                 print(brand, json.dumps(state))
                 print('Coupon context:', '\n'.join(line for line in text.splitlines() if re.search(r'coupon|code|%|valid|expire', line, re.I))[:8000])
             except Exception as exc:
                 state['status'] = 'not verified — browser fetch failed'
-                state['error'] = type(exc).__name__
+                state['error'] = type(exc).__name__ + ': ' + str(exc).splitlines()[0][:250]
                 print(brand, json.dumps(state))
             finally:
                 result['sources'][brand] = state

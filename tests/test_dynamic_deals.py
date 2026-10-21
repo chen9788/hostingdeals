@@ -42,4 +42,19 @@ class DynamicRules(unittest.TestCase):
         self.assertEqual([(o['product'], o['discount'].split(' ')[0]) for o in offers], [('Premium', '81%'), ('Unlimited', '83%')])
         self.assertTrue(all('not incremental' in o['discount'] for o in offers))
 
+    def test_namecheap_calendar_deadline_and_scope(self):
+        text = ('Valid October 1 - October 31, 2026\n'
+                'Discounted registration and transfer\nSee details below\nGHOSTDOT\nRegister domain →\n'
+                'Promotional price applies to first-year registrations and transfers only and is not applicable for premium or aftermarket domains.')
+        offers = parse('namecheap', text, 'https://www.namecheap.com/promos/coupons/', NOW.isoformat())
+        self.assertEqual(len(offers), 1)
+        item = offers[0]
+        self.assertEqual(item['source_end_date'], '2026-10-31')
+        self.assertIn('timezone not verified', item['expiry_note'])
+        # Freshly fetched but past the conservative, separately labeled withdrawal cutoff.
+        end = dt.datetime(2026, 10, 31, tzinfo=dt.timezone.utc)
+        self.assertFalse(current({**item, 'checked_at': end.isoformat()}, end))
+        self.assertTrue(current(item, NOW))
+        self.assertFalse(parse('namecheap', text.replace('first-year', 'all-year'), item['source_url'], NOW.isoformat()))
+
 if __name__ == '__main__': unittest.main()
