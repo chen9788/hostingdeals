@@ -3,15 +3,59 @@
   "mode": "Google Chrome headed (Xvfb virtual display on CI)",
   "sources": {
     "hostinger": {
-      "checked_at": "2026-10-21T07:24:02+00:00",
+      "checked_at": "2026-10-21T07:25:45+00:00",
       "source_url": "https://www.hostinger.com/coupons",
-      "status": "not verified — no matching official code captured",
+      "status": "officially_observed",
+      "robots": "permitted",
       "final_url": "https://www.hostinger.com/coupons",
       "http_status": 200,
       "text_sha256": "30c9d55baa07b8830ff8834be6695a8f681be4c4e407863b8ab3f92fd2a00c80",
-      "offers": 0
+      "offers": 3
     }
   },
-  "offers": [],
-  "browser_version": "155.0.8059.39"
+  "offers": [
+    {
+      "brand": "hostinger",
+      "code": "COUPONSPAGE",
+      "product": "Premium",
+      "discount": "81% off — displayed plan discount, not incremental code savings",
+      "terms": "Get 48 months for $113.76 (regular price $585.12). Renews at $10.99/mo.",
+      "valid_until": null,
+      "expiry_note": "not verified — no fixed deadline captured",
+      "source_url": "https://www.hostinger.com/coupons",
+      "checked_at": "2026-10-21T07:25:45+00:00",
+      "status": "officially_observed",
+      "checkout_status": "not verified",
+      "evidence": "81% off / Premium / 'COUPONSPAGE' coupon applied / Get 48 months for $113.76 (regular price $585.12). Renews at $10.99/mo."
+    },
+    {
+      "brand": "hostinger",
+      "code": "COUPONSPAGE",
+      "product": "Unlimited",
+      "discount": "83% off — displayed plan discount, not incremental code savings",
+      "terms": "Get 48 months for $159.36 (regular price $911.52). Renews at $16.99/mo.",
+      "valid_until": null,
+      "expiry_note": "not verified — no fixed deadline captured",
+      "source_url": "https://www.hostinger.com/coupons",
+      "checked_at": "2026-10-21T07:25:45+00:00",
+      "status": "officially_observed",
+      "checkout_status": "not verified",
+      "evidence": "83% off / Unlimited / 'COUPONSPAGE' coupon applied / Get 48 months for $159.36 (regular price $911.52). Renews at $16.99/mo."
+    },
+    {
+      "brand": "hostinger",
+      "code": "COUPONSPAGE",
+      "product": "Cloud Startup",
+      "discount": "73% off — displayed plan discount, not incremental code savings",
+      "terms": "Get 48 months for $364.32 (regular price $1,343.52). Renews at $25.99/mo.",
+      "valid_until": null,
+      "expiry_note": "not verified — no fixed deadline captured",
+      "source_url": "https://www.hostinger.com/coupons",
+      "checked_at": "2026-10-21T07:25:45+00:00",
+      "status": "officially_observed",
+      "checkout_status": "not verified",
+      "evidence": "73% off / Cloud Startup / 'COUPONSPAGE' coupon applied / Get 48 months for $364.32 (regular price $1,343.52). Renews at $25.99/mo."
+    }
+  ],
+  "browser_version": "155.0.8059.84"
 }
