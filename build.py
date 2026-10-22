@@ -76,8 +76,11 @@ def build(base_url, local=False):
             if path == '/coupons/' + brand + '/':
                 layer = dynamic_layer(brand, now)
                 if layer:
-                    head_end = body.index('</h1>') + len('</h1>')
-                    body = body[:head_end] + layer + body[head_end:]
+                    if '<!-- dynamic-deals -->' in body:
+                        body = body.replace('<!-- dynamic-deals -->', layer, 1)
+                    else:
+                        head_end = body.index('</h1>') + len('</h1>')
+                        body = body[:head_end] + layer + body[head_end:]
         for provider in providers:
             if path == '/providers/'+provider['id']+'/' and provider.get('coupon_page'):
                 body += '<section class="prose"><h2>Official coupon and promo evidence</h2><p><a href="'+provider['coupon_page']+'">'+esc(provider['coupon_title'])+'</a></p></section>'
