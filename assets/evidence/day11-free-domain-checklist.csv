@@ -1,0 +1,12 @@
+field,private_observation,evidence_scope
+observation_date,,"not verified; blank worksheet, no account test"
+purchase_route_new_or_existing,,"not verified; blank worksheet, no account test"
+plan,,"not verified; blank worksheet, no account test"
+current_billing_period,,"not verified; blank worksheet, no account test"
+selected_billing_period,,"not verified; blank worksheet, no account test"
+domain_extension,,"not verified; blank worksheet, no account test"
+claim_option_observed,,"not verified; blank worksheet, no account test"
+registration_charge_shown,,"not verified; blank worksheet, no account test"
+renewal_terms_shown,,"not verified; blank worksheet, no account test"
+claim_result,,"not verified; blank worksheet, no account test"
+source_of_rule,,"not verified; blank worksheet, no account test"
