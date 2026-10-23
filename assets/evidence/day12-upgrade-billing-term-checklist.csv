@@ -1,0 +1,7 @@
+field,official_scope_or_instruction,account_observation,observation_date,verification_status
+purchase_route,Hosting upgrade; separate from new purchase or renewal,,,not verified
+current_billing_period,Record the actual existing period,,,not verified
+offered_billing_terms,Documented upgrade rule: current period or 12 months,,,not verified
+selected_term,Record only the actual visible selection,,,not verified
+upgrade_amount_before_and_after,No new amount verified; do not substitute registration cart totals,,,not verified
+payment_and_effective_date,Record only matching account observations,,,not verified
