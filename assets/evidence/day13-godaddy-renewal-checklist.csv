@@ -1,0 +1,11 @@
+check,official_offer_reference,observation,observation_date,verification_status
+official_origin,,,,not verified
+customer_eligibility,,,,not verified
+order_type,,,,not verified
+product_extension_term,,,,not verified
+deadline,,,,not verified
+exact_application_response,,,,not verified
+same_order_before_total,,,,not verified
+same_order_after_total,,,,not verified
+taxes_fees,,,,not verified
+payment_result,,,,not verified
