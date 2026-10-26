@@ -4,79 +4,36 @@
   "requested_locale": "en-US",
   "sources": {
     "hostinger": {
-      "checked_at": "2026-10-25T12:01:33+00:00",
+      "checked_at": "2026-10-26T13:36:15+00:00",
       "source_url": "https://www.hostinger.com/coupons",
-      "status": "officially_observed",
+      "status": "not verified — no matching official code captured",
       "robots": "permitted",
       "final_url": "https://www.hostinger.com/coupons",
       "http_status": 200,
-      "text_sha256": "f76534deac72d5485cb33f982a2505429ef988ca1908de79eec84e60da574899",
-      "offers": 3
+      "text_sha256": "96ea8081f3f7b6573c80a64a71e96a21dc8c8abea6f1e6e91fefeeec8ba90e12",
+      "offers": 0
     },
     "namecheap": {
-      "checked_at": "2026-10-25T12:01:43+00:00",
+      "checked_at": "2026-10-26T13:36:22+00:00",
       "source_url": "https://www.namecheap.com/promos/coupons/",
       "status": "not verified — official source returned HTTP 403",
       "robots": "permitted",
       "final_url": "https://www.namecheap.com/promos/coupons/",
       "http_status": 403,
-      "text_sha256": "f78a91a670006dbbdbc790e0b4972f1c2f21db64b4c3492600a5b9b018165592",
+      "text_sha256": "999a6d0c654e187011d172ecc5337160f3f5c401006b14bbde0295fa5d9f686a",
       "offers": 0
     },
     "godaddy": {
-      "checked_at": "2026-10-25T12:01:53+00:00",
+      "checked_at": "2026-10-26T13:36:33+00:00",
       "source_url": "https://www.godaddy.com/promos/coupon-promo-codes",
-      "status": "not verified — official source returned HTTP 403",
+      "status": "not verified — no matching official code captured",
       "robots": "permitted",
       "final_url": "https://www.godaddy.com/",
-      "http_status": 403,
-      "text_sha256": "817b0ba0db5754507c870af57721320f3800ab19d3ffc0ddfa03d697ce4271fd",
+      "http_status": 200,
+      "text_sha256": "d46c2f5b0febeb80d77c4448e83ab8907e410e515b417276219b27c73c66ef7d",
       "offers": 0
     }
   },
-  "offers": [
-    {
-      "brand": "hostinger",
-      "code": "COUPONSPAGE",
-      "product": "Premium",
-      "discount": "81% off — displayed plan discount, not incremental code savings",
-      "terms": "Get 48 months for $113.76 (regular price $585.12). Renews at $10.99/mo.",
-      "valid_until": null,
-      "expiry_note": "not verified — no fixed deadline captured",
-      "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-10-25T12:01:33+00:00",
-      "status": "officially_observed",
-      "checkout_status": "not verified",
-      "evidence": "81% off / Premium / 'COUPONSPAGE' coupon applied / Get 48 months for $113.76 (regular price $585.12). Renews at $10.99/mo."
-    },
-    {
-      "brand": "hostinger",
-      "code": "COUPONSPAGE",
-      "product": "Unlimited",
-      "discount": "83% off — displayed plan discount, not incremental code savings",
-      "terms": "Get 48 months for $159.36 (regular price $911.52). Renews at $16.99/mo.",
-      "valid_until": null,
-      "expiry_note": "not verified — no fixed deadline captured",
-      "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-10-25T12:01:33+00:00",
-      "status": "officially_observed",
-      "checkout_status": "not verified",
-      "evidence": "83% off / Unlimited / 'COUPONSPAGE' coupon applied / Get 48 months for $159.36 (regular price $911.52). Renews at $16.99/mo."
-    },
-    {
-      "brand": "hostinger",
-      "code": "COUPONSPAGE",
-      "product": "Cloud Startup",
-      "discount": "73% off — displayed plan discount, not incremental code savings",
-      "terms": "Get 48 months for $364.32 (regular price $1,343.52). Renews at $25.99/mo.",
-      "valid_until": null,
-      "expiry_note": "not verified — no fixed deadline captured",
-      "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-10-25T12:01:33+00:00",
-      "status": "officially_observed",
-      "checkout_status": "not verified",
-      "evidence": "73% off / Cloud Startup / 'COUPONSPAGE' coupon applied / Get 48 months for $364.32 (regular price $1,343.52). Renews at $25.99/mo."
-    }
-  ],
+  "offers": [],
   "browser_version": "155.0.8059.39"
 }
