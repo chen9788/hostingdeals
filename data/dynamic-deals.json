@@ -4,7 +4,7 @@
   "requested_locale": "en-US",
   "sources": {
     "hostinger": {
-      "checked_at": "2026-10-26T13:36:15+00:00",
+      "checked_at": "2026-10-27T12:41:43+00:00",
       "source_url": "https://www.hostinger.com/coupons",
       "status": "not verified — no matching official code captured",
       "robots": "permitted",
@@ -14,23 +14,23 @@
       "offers": 0
     },
     "namecheap": {
-      "checked_at": "2026-10-26T13:36:22+00:00",
+      "checked_at": "2026-10-27T12:41:50+00:00",
       "source_url": "https://www.namecheap.com/promos/coupons/",
       "status": "not verified — official source returned HTTP 403",
       "robots": "permitted",
       "final_url": "https://www.namecheap.com/promos/coupons/",
       "http_status": 403,
-      "text_sha256": "999a6d0c654e187011d172ecc5337160f3f5c401006b14bbde0295fa5d9f686a",
+      "text_sha256": "d109f9157acff8a55712c2b5fce21eebc0bd8569459a85d1bdddb451c3f5baf2",
       "offers": 0
     },
     "godaddy": {
-      "checked_at": "2026-10-26T13:36:33+00:00",
+      "checked_at": "2026-10-27T12:42:00+00:00",
       "source_url": "https://www.godaddy.com/promos/coupon-promo-codes",
       "status": "not verified — no matching official code captured",
       "robots": "permitted",
       "final_url": "https://www.godaddy.com/",
       "http_status": 200,
-      "text_sha256": "d46c2f5b0febeb80d77c4448e83ab8907e410e515b417276219b27c73c66ef7d",
+      "text_sha256": "fd9da72a1e267f7ebb1ffd86d49f48f084efc37c056422baeeac4627dbca2b65",
       "offers": 0
     }
   },
