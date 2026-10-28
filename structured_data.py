@@ -69,7 +69,9 @@ def render(path, body, origin, config, providers, active, history):
         p=index[path.split('/')[2]]
         crumbs.append((p['name'],origin+'/providers/'+p['id']+'/'))
         entries=[(x['name'],x['url']) for x in p['renewal_sources']]
-    if path.startswith('/coupons/'):
+    if path=='/coupons/':
+        entries=[(p['coupon_title'],origin+p['coupon_page']) for p in providers if p.get('coupon_page')]
+    elif path.startswith('/coupons/'):
         p=index[path.split('/')[2]]
         crumbs.append((p['name'],origin+'/providers/'+p['id']+'/'))
         entries=[(x['name'],x['url']) for x in p['coupon_sources']]

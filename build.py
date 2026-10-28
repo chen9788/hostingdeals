@@ -21,6 +21,7 @@ def esc(value): return html.escape(str(value or ''), quote=True)
 def load(path): return json.loads((ROOT / path).read_text(encoding='utf-8'))
 def template(filename, **values):
     values.setdefault("jsonld", "")
+    values.setdefault("coupon_nav", "")
     values.setdefault("icon_version", hashlib.sha256((ROOT / "assets/favicon.svg").read_bytes()).hexdigest()[:12])
     values.setdefault("style_version", hashlib.sha256((ROOT / "assets/style.css").read_bytes()).hexdigest()[:12])
     return Template((ROOT / 'templates' / filename).read_text(encoding='utf-8')).substitute(values)
@@ -87,6 +88,7 @@ def build(base_url, local=False):
         if path == '/':
             body += '<section class="prose"><h2>Official coupon and promo guides</h2>' + ''.join('<p><a href="'+p['coupon_page']+'">'+esc(p['coupon_title'])+'</a></p>' for p in providers if p.get('coupon_page')) + '</section>'
         page = template('base.html', title=esc(title), description=esc(description), body=body,
+            coupon_nav=('<nav class="prose" aria-label="Coupon directory"><a href="/coupons/">Coupon and promo codes</a></nav>' if path in ('/coupons/hostinger/', '/coupons/godaddy/') else ''),
             jsonld=structured_data(path,body,base_url,config,providers,active,schema_history),
             canonical=esc(base_url + path), robots='noindex,follow' if noindex else 'index,follow',
             brand=esc(config['brand']), checked=esc(dataset['generated_at'][:10]))
@@ -112,6 +114,9 @@ def build(base_url, local=False):
     write('/renewals/bluehost/', 'Bluehost Renewal Prices, Coupons and Auto-Renewal Charges | HostingDealsGo',
         'Official Bluehost introductory versus renewal prices, billing descriptions and three unverified personal reports.',
         (ROOT / 'content/bluehost-renewal.html').read_text(encoding='utf-8'))
+    write('/coupons/', 'Coupon and promo codes | HostingDealsGo',
+        'Browse sourced coupon and promo code evidence by web hosting, cloud and VPS, or domain registrar.',
+        (ROOT / 'content/coupons-index.html').read_text(encoding='utf-8'))
     for provider in providers:
         if provider.get('coupon_page'):
             write(provider['coupon_page'], provider['coupon_title']+' | HostingDealsGo',
