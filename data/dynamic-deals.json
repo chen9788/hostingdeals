@@ -4,36 +4,79 @@
   "requested_locale": "en-US",
   "sources": {
     "hostinger": {
-      "checked_at": "2026-10-28T13:33:47+00:00",
+      "checked_at": "2026-10-29T13:45:38+00:00",
       "source_url": "https://www.hostinger.com/coupons",
-      "status": "not verified — no matching official code captured",
+      "status": "officially_observed",
       "robots": "permitted",
       "final_url": "https://www.hostinger.com/coupons",
       "http_status": 200,
       "text_sha256": "96ea8081f3f7b6573c80a64a71e96a21dc8c8abea6f1e6e91fefeeec8ba90e12",
-      "offers": 0
+      "offers": 3
     },
     "namecheap": {
-      "checked_at": "2026-10-28T13:33:50+00:00",
+      "checked_at": "2026-10-29T13:45:43+00:00",
       "source_url": "https://www.namecheap.com/promos/coupons/",
       "status": "not verified — official source returned HTTP 403",
       "robots": "permitted",
       "final_url": "https://www.namecheap.com/promos/coupons/",
       "http_status": 403,
-      "text_sha256": "7a9302d055c8631244bf37ea57ebcb8e9d65448aac2b70eb96456a4cb195d3ed",
+      "text_sha256": "219e68811eb4b0c9f03b6c96aa844b11b79103f7eb5f0a58f475c505edc84c02",
       "offers": 0
     },
     "godaddy": {
-      "checked_at": "2026-10-28T13:34:01+00:00",
+      "checked_at": "2026-10-29T13:45:54+00:00",
       "source_url": "https://www.godaddy.com/promos/coupon-promo-codes",
       "status": "not verified — official source returned HTTP 403",
       "robots": "permitted",
       "final_url": "https://www.godaddy.com/",
       "http_status": 403,
-      "text_sha256": "1aca6742f704589f9835660fec352cfe3270628599f2765b191bb101661f7958",
+      "text_sha256": "60bf17462cbef2e05b20bf1a94a17755d97f112c08e3363e5f061ebdebc8e9b4",
       "offers": 0
     }
   },
-  "offers": [],
-  "browser_version": "155.0.8059.39"
+  "offers": [
+    {
+      "brand": "hostinger",
+      "code": "COUPONSPAGE",
+      "product": "Premium",
+      "discount": "81% off — displayed plan discount, not incremental code savings",
+      "terms": "Today you pay $113.76 for 48 months. Renews at $10.99/mo for the same term. Cancel anytime.",
+      "valid_until": null,
+      "expiry_note": "not verified — no fixed deadline captured",
+      "source_url": "https://www.hostinger.com/coupons",
+      "checked_at": "2026-10-29T13:45:38+00:00",
+      "status": "officially_observed",
+      "checkout_status": "not verified",
+      "evidence": "81% off / Premium / 'COUPONSPAGE' coupon applied / Today you pay $113.76 for 48 months. Renews at $10.99/mo for the same term. Cancel anytime."
+    },
+    {
+      "brand": "hostinger",
+      "code": "COUPONSPAGE",
+      "product": "Unlimited",
+      "discount": "83% off — displayed plan discount, not incremental code savings",
+      "terms": "Today you pay $159.36 for 48 months. Renews at $16.99/mo for the same term. Cancel anytime.",
+      "valid_until": null,
+      "expiry_note": "not verified — no fixed deadline captured",
+      "source_url": "https://www.hostinger.com/coupons",
+      "checked_at": "2026-10-29T13:45:38+00:00",
+      "status": "officially_observed",
+      "checkout_status": "not verified",
+      "evidence": "83% off / Unlimited / 'COUPONSPAGE' coupon applied / Today you pay $159.36 for 48 months. Renews at $16.99/mo for the same term. Cancel anytime."
+    },
+    {
+      "brand": "hostinger",
+      "code": "COUPONSPAGE",
+      "product": "Cloud Startup",
+      "discount": "73% off — displayed plan discount, not incremental code savings",
+      "terms": "Today you pay $364.32 for 48 months. Renews at $25.99/mo for the same term. Cancel anytime.",
+      "valid_until": null,
+      "expiry_note": "not verified — no fixed deadline captured",
+      "source_url": "https://www.hostinger.com/coupons",
+      "checked_at": "2026-10-29T13:45:38+00:00",
+      "status": "officially_observed",
+      "checkout_status": "not verified",
+      "evidence": "73% off / Cloud Startup / 'COUPONSPAGE' coupon applied / Today you pay $364.32 for 48 months. Renews at $25.99/mo for the same term. Cancel anytime."
+    }
+  ],
+  "browser_version": "156.0.8078.47"
 }
