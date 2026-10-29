@@ -1,7 +1,7 @@
 provider,title,price_text,discount_text,term_text,renewal_text,valid_until,checked_at,source_url
-digitalocean,DigitalOcean Agent Droplets trial (AI product only),,,,,,2026-10-28T13:11:12+00:00,https://www.digitalocean.com/pricing/agent-droplets
-dreamhost,DreamHost Web Hosting Growth,$3.49 /mo,SAVE 75%,4 years,$8.99 /mo,,2026-10-28T13:11:12+00:00,https://www.dreamhost.com/promo/
-dreamhost,DreamHost Web Hosting Launch,$1.99 /mo,SAVE 83%,4 years,$7.99 /mo,,2026-10-28T13:11:12+00:00,https://www.dreamhost.com/promo/
-dreamhost,DreamHost Web Hosting Scale,$7.99 /mo,SAVE 71%,4 years,$19.99 /mo,,2026-10-28T13:11:12+00:00,https://www.dreamhost.com/promo/
-kinsta,Kinsta first month on eligible WordPress plans,,,30 days,"Billing begins in the second month, setting your ongoing monthly or annual billing date.",,2026-10-28T13:11:12+00:00,https://kinsta.com/docs/billing/wordpress-hosting-plans/
-vultr,Vultr introductory cloud credits,,,30 days,,,2026-10-28T13:11:12+00:00,https://docs.vultr.com/platform/create-an-account
+digitalocean,DigitalOcean Agent Droplets trial (AI product only),,,,,,2026-10-29T13:18:22+00:00,https://www.digitalocean.com/pricing/agent-droplets
+dreamhost,DreamHost Web Hosting Growth,$3.49 /mo,SAVE 75%,4 years,$8.99 /mo,,2026-10-29T13:18:22+00:00,https://www.dreamhost.com/promo/
+dreamhost,DreamHost Web Hosting Launch,$1.99 /mo,SAVE 83%,4 years,$7.99 /mo,,2026-10-29T13:18:22+00:00,https://www.dreamhost.com/promo/
+dreamhost,DreamHost Web Hosting Scale,$7.99 /mo,SAVE 71%,4 years,$19.99 /mo,,2026-10-29T13:18:22+00:00,https://www.dreamhost.com/promo/
+kinsta,Kinsta first month on eligible WordPress plans,,,30 days,"Billing begins in the second month, setting your ongoing monthly or annual billing date.",,2026-10-29T13:18:22+00:00,https://kinsta.com/docs/billing/wordpress-hosting-plans/
+vultr,Vultr introductory cloud credits,,,30 days,,,2026-10-29T13:18:22+00:00,https://docs.vultr.com/platform/create-an-account
