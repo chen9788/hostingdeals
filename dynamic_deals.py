@@ -77,7 +77,7 @@ def parse(brand, text, url, now):
         plan_pattern = (r'(?P<discount>\d+% off)\s*\n(?P<product>Premium|Unlimited|Cloud Startup)\n'
                         r'(?:(?!\n(?:Premium|Unlimited|Cloud Startup)\n).){0,450}?'
                         r"'(?P<code>COUPONSPAGE)' coupon applied\s*\nUse coupon\s*\n"
-                        r'(?P<terms>Get \d+ months for [^\n]+)')
+                        r'(?P<terms>(?:Get \d+ months for|Today you pay)[^\n]+)')
         for m in re.finditer(plan_pattern, text, re.S):
             offers.append({'brand': brand, 'code': m['code'], 'product': m['product'],
                 'discount': m['discount'] + ' — displayed plan discount, not incremental code savings',
