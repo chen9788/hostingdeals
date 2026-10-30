@@ -28,7 +28,7 @@ def current(item, now):
     except (ValueError, KeyError, TypeError):
         return False
 
-def parse(brand, text, url, now):
+def parse(brand, text, url, now, diagnostics=None):
     """Fail closed: each recipe requires an explicit code/discount association."""
     if not official(brand, url): return []
     if re.search(r'just a moment|verify you are human|access denied|captcha', text, re.I): return []
@@ -86,6 +86,15 @@ def parse(brand, text, url, now):
                 'source_url': url, 'checked_at': now, 'status': 'officially_observed',
                 'checkout_status': 'not verified',
                 'evidence': m['discount'] + ' / ' + m['product'] + " / 'COUPONSPAGE' coupon applied / " + m['terms']})
+        if diagnostics is not None:
+            candidate_pattern = (
+                r'\d+% off\s*\n(?:Premium|Unlimited|Cloud Startup)\n'
+                r'(?:(?!\n(?:Premium|Unlimited|Cloud Startup)\n).){0,450}?'
+                r"'COUPONSPAGE' coupon applied")
+            candidates = list(re.finditer(candidate_pattern, text, re.S))
+            diagnostics['candidates_detected'] = len(candidates)
+            diagnostics['primary_matched'] = len(offers)
+            diagnostics['suspected_copy_change'] = bool(candidates and not offers)
         if offers: return offers
         # Deliberately tied to the official coupon instruction, not arbitrary uppercase words.
         patterns = [r'(?:coupon code|code)\s*[:\-]?\s*(?P<code>COUPONSPAGE)\b.{0,180}?(?P<discount>\d+%\s*(?:off|discount))',

@@ -53,7 +53,9 @@ def main():
                              text_sha256=hashlib.sha256(text.encode()).hexdigest())
                 (evidence / (brand + '.txt')).write_text(text, encoding='utf-8')
                 page.screenshot(path=str(evidence / (brand + '.png')), full_page=True)
-                found = parse(brand, text, page.url, now) if response and response.status == 200 else []
+                found = parse(brand, text, page.url, now, diagnostics=state) if response and response.status == 200 else []
+                if state.get('suspected_copy_change'):
+                    print('::warning::Hostinger: plan/code/discount candidates present but primary parser matched zero; suspected copy change')
                 result['offers'].extend(found)
                 state['status'] = 'officially_observed' if found else 'not verified — no matching official code captured'
                 if response and response.status != 200:
