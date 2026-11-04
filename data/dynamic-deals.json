@@ -4,7 +4,7 @@
   "requested_locale": "en-US",
   "sources": {
     "hostinger": {
-      "checked_at": "2026-11-03T14:40:40+00:00",
+      "checked_at": "2026-11-04T14:53:28+00:00",
       "source_url": "https://www.hostinger.com/coupons",
       "status": "officially_observed",
       "robots": "permitted",
@@ -17,23 +17,23 @@
       "offers": 3
     },
     "namecheap": {
-      "checked_at": "2026-11-03T14:40:45+00:00",
+      "checked_at": "2026-11-04T14:53:33+00:00",
       "source_url": "https://www.namecheap.com/promos/coupons/",
       "status": "not verified — official source returned HTTP 403",
       "robots": "permitted",
       "final_url": "https://www.namecheap.com/promos/coupons/",
       "http_status": 403,
-      "text_sha256": "bc059062dddb2849b99b3e49102a09761aaf8f0153e0fb63a71101c5d5d45770",
+      "text_sha256": "13696f191eea6bbe96328f37fffaa13f19680b199af350edfcbee0fc5966c919",
       "offers": 0
     },
     "godaddy": {
-      "checked_at": "2026-11-03T14:40:55+00:00",
+      "checked_at": "2026-11-04T14:53:44+00:00",
       "source_url": "https://www.godaddy.com/promos/coupon-promo-codes",
       "status": "not verified — official source returned HTTP 403",
       "robots": "permitted",
       "final_url": "https://www.godaddy.com/",
       "http_status": 403,
-      "text_sha256": "851aa1edfbc2ca05b006fde44f0b1d2a1b2c3746b8403f7b56158807d1712923",
+      "text_sha256": "23930922610e2c0a3dc461d53299947194f16c4ac64a61b3c3b4a165c3e80dd8",
       "offers": 0
     }
   },
@@ -47,7 +47,7 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-11-03T14:40:40+00:00",
+      "checked_at": "2026-11-04T14:53:28+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "85% off / Premium / 'COUPONSPAGE' coupon applied / Today you pay $90.72 for 48 months. Renews at $10.99/mo for the same term. Cancel anytime."
@@ -61,7 +61,7 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-11-03T14:40:40+00:00",
+      "checked_at": "2026-11-04T14:53:28+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "86% off / Unlimited / 'COUPONSPAGE' coupon applied / Today you pay $127.20 for 48 months. Renews at $16.99/mo for the same term. Cancel anytime."
@@ -75,7 +75,7 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-11-03T14:40:40+00:00",
+      "checked_at": "2026-11-04T14:53:28+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "73% off / Cloud Startup / 'COUPONSPAGE' coupon applied / Today you pay $364.32 for 48 months. Renews at $25.99/mo for the same term. Cancel anytime."
