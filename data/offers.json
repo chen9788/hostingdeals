@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-10T15:01:34+00:00",
+  "generated_at": "2026-11-11T14:33:14+00:00",
   "locale": "en-US",
   "offers": [
     {
@@ -31,7 +31,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "eaf9c005c8ce4c9fd93a273b841dae8240bd7064e0445d70ac88f0d230352317",
-      "last_attempt_at": "2026-11-10T15:01:34+00:00"
+      "last_attempt_at": "2026-11-11T14:33:14+00:00"
     },
     {
       "id": "digitalocean-agent-droplets-trial",
@@ -51,7 +51,7 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "Agent Droplets Free Trial Pro Team Monthly price $5 Credit",
       "terms_evidence": [
@@ -59,7 +59,7 @@
         "Available to new DigitalOcean customers only."
       ],
       "checkout_tested": false,
-      "source_sha256": "b63c8bb8c1850b60aa146027a96164bf0e176f6159395fecc5a04920853efeb8"
+      "source_sha256": "7287a692e0d0e833e4522da54c6b5667d01f5281acabcbf8fa33ddcf953ac7a7"
     },
     {
       "id": "dreamhost-growth",
@@ -79,14 +79,14 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "Web Hosting Growth Level up with more room to grow. On Sale First 4 years at $3.49 /mo SAVE 75% Sign Up Now Auto-renews at $8.99 /mo after 4 years.",
       "terms_evidence": [
         "The full term plus taxes are charged at checkout."
       ],
       "checkout_tested": false,
-      "source_sha256": "2ef6390845c665ad32f0a1c0eb8d642f90e85ba421e90db64d233deb59701ecf"
+      "source_sha256": "08eaf611c1c302b4c853b5c96e574b90653706c7f608fb022878a081cad78a25"
     },
     {
       "id": "dreamhost-launch",
@@ -106,14 +106,14 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "Web Hosting Launch Simple, reliable hosting to launch. On Sale First 4 years at $1.99 /mo SAVE 83% Sign Up Now Auto-renews at $7.99 /mo after 4 years.",
       "terms_evidence": [
         "The full term plus taxes are charged at checkout."
       ],
       "checkout_tested": false,
-      "source_sha256": "2ef6390845c665ad32f0a1c0eb8d642f90e85ba421e90db64d233deb59701ecf"
+      "source_sha256": "08eaf611c1c302b4c853b5c96e574b90653706c7f608fb022878a081cad78a25"
     },
     {
       "id": "dreamhost-scale",
@@ -133,14 +133,14 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "Web Hosting Scale Built for traffic and bigger projects. On Sale First 4 years at $7.99 /mo SAVE 71% Sign Up Now Auto-renews at $19.99 /mo after 4 years.",
       "terms_evidence": [
         "The full term plus taxes are charged at checkout."
       ],
       "checkout_tested": false,
-      "source_sha256": "2ef6390845c665ad32f0a1c0eb8d642f90e85ba421e90db64d233deb59701ecf"
+      "source_sha256": "08eaf611c1c302b4c853b5c96e574b90653706c7f608fb022878a081cad78a25"
     },
     {
       "id": "hostinger-cloud-startup",
@@ -169,7 +169,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "6096269b80ffbac00428b529da506b0b31b50e8f62ee3730dc87d831f58cd527",
-      "last_attempt_at": "2026-11-10T15:01:34+00:00"
+      "last_attempt_at": "2026-11-11T14:33:14+00:00"
     },
     {
       "id": "hostinger-premium",
@@ -198,7 +198,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "6096269b80ffbac00428b529da506b0b31b50e8f62ee3730dc87d831f58cd527",
-      "last_attempt_at": "2026-11-10T15:01:34+00:00"
+      "last_attempt_at": "2026-11-11T14:33:14+00:00"
     },
     {
       "id": "hostinger-unlimited",
@@ -227,7 +227,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "6096269b80ffbac00428b529da506b0b31b50e8f62ee3730dc87d831f58cd527",
-      "last_attempt_at": "2026-11-10T15:01:34+00:00"
+      "last_attempt_at": "2026-11-11T14:33:14+00:00"
     },
     {
       "id": "kinsta-wordpress-trial",
@@ -247,7 +247,7 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "First month free: If you’re new to Kinsta, you can sign up for our Single 35k visits, Single 20GB bandwidth, WP 2, or Launch plan and get the first 30 days free , on either monthly or annual billing.",
       "terms_evidence": [
@@ -255,7 +255,7 @@
         "Overages are still applicable during your first free month."
       ],
       "checkout_tested": false,
-      "source_sha256": "0ded0dd219c5b7a2a2135461c38d572c494757514ccda244496c055aa4b2ad1e"
+      "source_sha256": "d966e72cb6faf734fe87cc17e7b93e259f53808770bd59f6caa10ef28d63cb20"
     },
     {
       "id": "vultr-trial-credit",
@@ -275,7 +275,7 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "Vultr offers free credits for up to 30 days for you to try our services.",
       "terms_evidence": [
@@ -283,13 +283,13 @@
         "Ensure to deprovision the resources before your credits expire or end to avoid getting billed extra."
       ],
       "checkout_tested": false,
-      "source_sha256": "cc83e38f3e3072877b56a5353db50cd495f24e3c606eb05c23596d60a3e7c5ee"
+      "source_sha256": "480d47ec7bb5b5e0c351db7c64515c302e28f6c098ba15c05a60a4e276ba7b77"
     }
   ],
   "sources": [
     {
       "id": "digitalocean",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 1,
       "status": "ok",
       "sitemaps": [
@@ -309,7 +309,7 @@
     },
     {
       "id": "cloudways",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -333,7 +333,7 @@
     },
     {
       "id": "a2-hosting",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -354,7 +354,7 @@
     },
     {
       "id": "dreamhost",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 3,
       "status": "ok",
       "sitemaps": [
@@ -379,7 +379,7 @@
     },
     {
       "id": "vultr",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 1,
       "status": "ok",
       "sitemaps": [
@@ -396,7 +396,7 @@
     },
     {
       "id": "namecheap",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "unavailable",
       "sitemaps": [
@@ -412,7 +412,7 @@
     },
     {
       "id": "godaddy",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "unavailable",
       "sitemaps": [
@@ -473,7 +473,7 @@
     },
     {
       "id": "hostinger",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -584,7 +584,7 @@
     },
     {
       "id": "siteground",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -604,7 +604,7 @@
     },
     {
       "id": "bluehost",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "robots_unavailable_or_disallowed",
       "sitemaps": [],
@@ -617,7 +617,7 @@
     },
     {
       "id": "hostgator",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "robots_unavailable_or_disallowed",
       "sitemaps": [],
@@ -630,7 +630,7 @@
     },
     {
       "id": "kinsta",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 1,
       "status": "ok",
       "sitemaps": [
@@ -647,7 +647,6 @@
         "https://kinsta.com/feed/"
       ],
       "candidates": [
-        "https://kinsta.com/pricing",
         "https://kinsta.com/pricing/"
       ],
       "errors": [],
@@ -659,7 +658,7 @@
     },
     {
       "id": "ovhcloud",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -679,7 +678,7 @@
     },
     {
       "id": "contabo",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "unavailable",
       "sitemaps": [
@@ -697,7 +696,7 @@
     },
     {
       "id": "liquid-web",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -717,7 +716,7 @@
     },
     {
       "id": "hetzner",
-      "checked_at": "2026-11-10T15:01:34+00:00",
+      "checked_at": "2026-11-11T14:33:14+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
