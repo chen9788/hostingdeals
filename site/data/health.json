@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T15:25:26+00:00",
+  "generated_at": "2026-11-13T14:43:15+00:00",
   "observed_offers": 6,
   "provider_status": {
     "digitalocean": "ok",
@@ -15,7 +15,7 @@
     "hostgator": "robots_unavailable_or_disallowed",
     "kinsta": "ok",
     "ovhcloud": "no_extractable_offer",
-    "contabo": "unavailable",
+    "contabo": "no_extractable_offer",
     "liquid-web": "no_extractable_offer",
     "hetzner": "no_extractable_offer"
   }
