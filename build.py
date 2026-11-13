@@ -111,6 +111,9 @@ def build(base_url, local=False):
     write('/renewals/godaddy/', 'GoDaddy Renewal Coupon, Promo Codes and Domain Renewal Prices | HostingDealsGo',
         'Official US GoDaddy renewal prices, membership tiers, registration terms and three sourced customer reports.',
         (ROOT / 'content/godaddy-renewal.html').read_text(encoding='utf-8'))
+    write('/renewals/namecheap/', 'Namecheap Renewal Promo Code: Eligibility and Official Rules | HostingDealsGo',
+        'Namecheap renewal coupon eligibility by product, automatic-billing limits and dated evidence; renewal checkout not verified.',
+        (ROOT / 'content/namecheap-renewal-coupons.html').read_text(encoding='utf-8'))
     write('/renewals/bluehost/', 'Bluehost Renewal Prices, Coupons and Auto-Renewal Charges | HostingDealsGo',
         'Official Bluehost introductory versus renewal prices, billing descriptions and three unverified personal reports.',
         (ROOT / 'content/bluehost-renewal.html').read_text(encoding='utf-8'))
