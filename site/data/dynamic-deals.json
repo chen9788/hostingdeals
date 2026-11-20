@@ -4,7 +4,7 @@
   "requested_locale": "en-US",
   "sources": {
     "hostinger": {
-      "checked_at": "2026-11-19T16:05:05+00:00",
+      "checked_at": "2026-11-20T15:46:46+00:00",
       "source_url": "https://www.hostinger.com/coupons",
       "status": "officially_observed",
       "robots": "permitted",
@@ -17,23 +17,23 @@
       "offers": 3
     },
     "namecheap": {
-      "checked_at": "2026-11-19T16:05:11+00:00",
+      "checked_at": "2026-11-20T15:46:49+00:00",
       "source_url": "https://www.namecheap.com/promos/coupons/",
-      "status": "not verified — official source returned HTTP 403",
+      "status": "officially_observed",
       "robots": "permitted",
       "final_url": "https://www.namecheap.com/promos/coupons/",
-      "http_status": 403,
-      "text_sha256": "4bc9d5e79d6e4a10abf5b0bd4f2eeb46939329bd9518eb5fa860d716e38394c5",
-      "offers": 0
+      "http_status": 200,
+      "text_sha256": "96c1db6139f4aa1db1ef82b39b81f5b6c6e026b245a349ad3184b7ae7aad4697",
+      "offers": 1
     },
     "godaddy": {
-      "checked_at": "2026-11-19T16:05:22+00:00",
+      "checked_at": "2026-11-20T15:46:50+00:00",
       "source_url": "https://www.godaddy.com/promos/coupon-promo-codes",
-      "status": "not verified — official source returned HTTP 403",
+      "status": "not verified — no matching official code captured",
       "robots": "permitted",
       "final_url": "https://www.godaddy.com/",
-      "http_status": 403,
-      "text_sha256": "11a8cda995dd04a8447cf03ebe0eb481c11e28b9e552ab460063457bed4e91ff",
+      "http_status": 200,
+      "text_sha256": "2c48513b91ef6ef91e62b8114b4417ba459c2864f2fbafc2998ae8c3cc2a0064",
       "offers": 0
     }
   },
@@ -47,7 +47,7 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-11-19T16:05:05+00:00",
+      "checked_at": "2026-11-20T15:46:46+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "85% off / Premium / 'COUPONSPAGE' coupon applied / Today you pay $90.72 for 48 months. Renews at $10.99/mo for the same term. Cancel anytime."
@@ -61,7 +61,7 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-11-19T16:05:05+00:00",
+      "checked_at": "2026-11-20T15:46:46+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "86% off / Unlimited / 'COUPONSPAGE' coupon applied / Today you pay $127.20 for 48 months. Renews at $16.99/mo for the same term. Cancel anytime."
@@ -75,11 +75,28 @@
       "valid_until": null,
       "expiry_note": "not verified — no fixed deadline captured",
       "source_url": "https://www.hostinger.com/coupons",
-      "checked_at": "2026-11-19T16:05:05+00:00",
+      "checked_at": "2026-11-20T15:46:46+00:00",
       "status": "officially_observed",
       "checkout_status": "not verified",
       "evidence": "73% off / Cloud Startup / 'COUPONSPAGE' coupon applied / Today you pay $364.32 for 48 months. Renews at $25.99/mo for the same term. Cancel anytime."
+    },
+    {
+      "brand": "namecheap",
+      "product": "Domain registration / transfer",
+      "code": "THANKFULDOT",
+      "discount": "Discounted registration and transfer",
+      "terms": "Promotional price applies to first-year registrations and transfers only and is not applicable for premium or aftermarket domains. Prices vary by TLD; see the official table.",
+      "source_start_date": "2026-11-01",
+      "source_end_date": "2026-11-30",
+      "valid_until": null,
+      "withdraw_at": "2026-11-30T00:00:00+00:00",
+      "expiry_note": "Valid November 1 - November 30, 2026; timezone not verified. Conservatively removed at 00:00 UTC on the listed end date; while supplies last.",
+      "source_url": "https://www.namecheap.com/promos/coupons/",
+      "checked_at": "2026-11-20T15:46:49+00:00",
+      "status": "officially_observed",
+      "checkout_status": "not verified",
+      "evidence": "Discounted registration and transfer / THANKFULDOT / Valid November 1 - November 30, 2026"
     }
   ],
-  "browser_version": "157.0.8103.78"
+  "browser_version": "157.0.8103.50"
 }
