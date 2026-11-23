@@ -306,5 +306,89 @@
       "valid_until": null
     },
     "source_url": "https://www.hostinger.com/pricing"
+  },
+  {
+    "observed_at": "2026-11-23T18:27:16+00:00",
+    "offer_id": "dreamhost-growth",
+    "title": "DreamHost Web Hosting Growth",
+    "before": {
+      "status": "observed",
+      "price_text": "$3.49 /mo",
+      "renewal_text": "$8.99 /mo",
+      "discount_text": "SAVE 75%",
+      "benefit_text": null,
+      "term_text": "4 years",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "after": {
+      "status": "unavailable",
+      "price_text": "$3.49 /mo",
+      "renewal_text": "$8.99 /mo",
+      "discount_text": "SAVE 75%",
+      "benefit_text": null,
+      "term_text": "4 years",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "source_url": "https://www.dreamhost.com/promo/"
+  },
+  {
+    "observed_at": "2026-11-23T18:27:16+00:00",
+    "offer_id": "dreamhost-launch",
+    "title": "DreamHost Web Hosting Launch",
+    "before": {
+      "status": "observed",
+      "price_text": "$1.99 /mo",
+      "renewal_text": "$7.99 /mo",
+      "discount_text": "SAVE 83%",
+      "benefit_text": null,
+      "term_text": "4 years",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "after": {
+      "status": "unavailable",
+      "price_text": "$1.99 /mo",
+      "renewal_text": "$7.99 /mo",
+      "discount_text": "SAVE 83%",
+      "benefit_text": null,
+      "term_text": "4 years",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "source_url": "https://www.dreamhost.com/promo/"
+  },
+  {
+    "observed_at": "2026-11-23T18:27:16+00:00",
+    "offer_id": "dreamhost-scale",
+    "title": "DreamHost Web Hosting Scale",
+    "before": {
+      "status": "observed",
+      "price_text": "$7.99 /mo",
+      "renewal_text": "$19.99 /mo",
+      "discount_text": "SAVE 71%",
+      "benefit_text": null,
+      "term_text": "4 years",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "after": {
+      "status": "unavailable",
+      "price_text": "$7.99 /mo",
+      "renewal_text": "$19.99 /mo",
+      "discount_text": "SAVE 71%",
+      "benefit_text": null,
+      "term_text": "4 years",
+      "code": null,
+      "valid_from": null,
+      "valid_until": null
+    },
+    "source_url": "https://www.dreamhost.com/promo/"
   }
 ]
