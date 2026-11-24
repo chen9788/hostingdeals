@@ -269,6 +269,7 @@
   },
   {
     "id": "namecheap",
+    "collection_enabled": false,
     "name": "Namecheap",
     "home": "https://www.namecheap.com/",
     "domains": [

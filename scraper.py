@@ -124,6 +124,10 @@ def collect(provider, now):
     domains = provider['domains']
     state = {'id': provider['id'], 'checked_at': now, 'offers': 0, 'status': 'unavailable',
         'sitemaps': [], 'feeds': [], 'candidates': [], 'errors': [], 'js_mode': 'unknown'}
+    if provider.get('collection_enabled', True) is False:
+        state.pop('checked_at', None)
+        state.update(status='not_checked_paused_by_owner', js_mode='not_attempted', collection_paused=True)
+        return [], state
     robots_cache = {}
     def permitted(url):
         parsed = urllib.parse.urlsplit(url)
