@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T18:27:16+00:00",
+  "generated_at": "2026-11-24T17:55:37+00:00",
   "locale": "en-US",
   "offers": [
     {
@@ -31,7 +31,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "eaf9c005c8ce4c9fd93a273b841dae8240bd7064e0445d70ac88f0d230352317",
-      "last_attempt_at": "2026-11-23T18:27:16+00:00"
+      "last_attempt_at": "2026-11-24T17:55:37+00:00"
     },
     {
       "id": "digitalocean-agent-droplets-trial",
@@ -51,7 +51,7 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "Agent Droplets Free Trial Pro Team Monthly price $5 Credit",
       "terms_evidence": [
@@ -59,7 +59,7 @@
         "Available to new DigitalOcean customers only."
       ],
       "checkout_tested": false,
-      "source_sha256": "e96d498b3ae9a2aa06adb0f75ba9e99b3b69e826b70d4d4c99a9df0e60a89b67"
+      "source_sha256": "555f48a5594bd11c920bc4e31d5237afa39ad7e00c188ccdb0761e3669ff7f0b"
     },
     {
       "id": "dreamhost-growth",
@@ -87,7 +87,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "1dfe3d34698eff3b6011aff7a373d9f70d1afaed132d9364167bd85a8e3ee670",
-      "last_attempt_at": "2026-11-23T18:27:16+00:00"
+      "last_attempt_at": "2026-11-24T17:55:37+00:00"
     },
     {
       "id": "dreamhost-launch",
@@ -115,7 +115,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "1dfe3d34698eff3b6011aff7a373d9f70d1afaed132d9364167bd85a8e3ee670",
-      "last_attempt_at": "2026-11-23T18:27:16+00:00"
+      "last_attempt_at": "2026-11-24T17:55:37+00:00"
     },
     {
       "id": "dreamhost-scale",
@@ -143,7 +143,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "1dfe3d34698eff3b6011aff7a373d9f70d1afaed132d9364167bd85a8e3ee670",
-      "last_attempt_at": "2026-11-23T18:27:16+00:00"
+      "last_attempt_at": "2026-11-24T17:55:37+00:00"
     },
     {
       "id": "hostinger-cloud-startup",
@@ -172,7 +172,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "6096269b80ffbac00428b529da506b0b31b50e8f62ee3730dc87d831f58cd527",
-      "last_attempt_at": "2026-11-23T18:27:16+00:00"
+      "last_attempt_at": "2026-11-24T17:55:37+00:00"
     },
     {
       "id": "hostinger-premium",
@@ -201,7 +201,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "6096269b80ffbac00428b529da506b0b31b50e8f62ee3730dc87d831f58cd527",
-      "last_attempt_at": "2026-11-23T18:27:16+00:00"
+      "last_attempt_at": "2026-11-24T17:55:37+00:00"
     },
     {
       "id": "hostinger-unlimited",
@@ -230,7 +230,7 @@
       ],
       "checkout_tested": false,
       "source_sha256": "6096269b80ffbac00428b529da506b0b31b50e8f62ee3730dc87d831f58cd527",
-      "last_attempt_at": "2026-11-23T18:27:16+00:00"
+      "last_attempt_at": "2026-11-24T17:55:37+00:00"
     },
     {
       "id": "kinsta-wordpress-trial",
@@ -250,7 +250,7 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "First month free: If you’re new to Kinsta, you can sign up for our Single 35k visits, Single 20GB bandwidth, WP 2, or Launch plan and get the first 30 days free , on either monthly or annual billing.",
       "terms_evidence": [
@@ -278,7 +278,7 @@
       "valid_from": null,
       "valid_until": null,
       "currency": null,
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "first_seen_at": "2026-10-11T15:51:51+00:00",
       "evidence": "Vultr offers free credits for up to 30 days for you to try our services.",
       "terms_evidence": [
@@ -286,13 +286,13 @@
         "Ensure to deprovision the resources before your credits expire or end to avoid getting billed extra."
       ],
       "checkout_tested": false,
-      "source_sha256": "e5081d09fac8eb866ae324111878ce5e8d3009b7d7b9b785b28292892e19587c"
+      "source_sha256": "1b1f226c0b323b79a4e02ca70d879f267eccfc630e1ee6e2395831d9345ee050"
     }
   ],
   "sources": [
     {
       "id": "digitalocean",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 1,
       "status": "ok",
       "sitemaps": [
@@ -300,7 +300,6 @@
       ],
       "feeds": [],
       "candidates": [
-        "https://www.digitalocean.com/community/tutorials/dedicated-gpu-vs-per-token-pricing-break-even",
         "https://www.digitalocean.com/pricing",
         "https://www.digitalocean.com/pricing/calculator"
       ],
@@ -313,7 +312,7 @@
     },
     {
       "id": "cloudways",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -339,7 +338,7 @@
     },
     {
       "id": "a2-hosting",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -359,7 +358,7 @@
     },
     {
       "id": "dreamhost",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -384,7 +383,7 @@
     },
     {
       "id": "vultr",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 1,
       "status": "ok",
       "sitemaps": [
@@ -401,23 +400,18 @@
     },
     {
       "id": "namecheap",
-      "checked_at": "2026-11-23T18:27:16+00:00",
       "offers": 0,
-      "status": "unavailable",
-      "sitemaps": [
-        "https://www.namecheap.com/sitemap.xml"
-      ],
+      "status": "not_checked_paused_by_owner",
+      "sitemaps": [],
       "feeds": [],
       "candidates": [],
-      "errors": [
-        "home: HTTPError: HTTP Error 403: Forbidden",
-        "offer: HTTPError: HTTP Error 403: Forbidden"
-      ],
-      "js_mode": "unknown"
+      "errors": [],
+      "js_mode": "not_attempted",
+      "collection_paused": true
     },
     {
       "id": "godaddy",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "unavailable",
       "sitemaps": [
@@ -478,7 +472,7 @@
     },
     {
       "id": "hostinger",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -574,6 +568,7 @@
       "feeds": [],
       "candidates": [
         "https://www.hostinger.com/#pricing",
+        "https://www.hostinger.com/?quiz=black-friday-deals",
         "https://www.hostinger.com/black-friday",
         "https://www.hostinger.com/pricing",
         "https://www.hostinger.com/pricing?plan=shared_and_cloud_grouped_short#compare-table"
@@ -589,7 +584,7 @@
     },
     {
       "id": "siteground",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -609,7 +604,7 @@
     },
     {
       "id": "bluehost",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "robots_unavailable_or_disallowed",
       "sitemaps": [],
@@ -622,7 +617,7 @@
     },
     {
       "id": "hostgator",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "robots_unavailable_or_disallowed",
       "sitemaps": [],
@@ -635,7 +630,7 @@
     },
     {
       "id": "kinsta",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 1,
       "status": "ok",
       "sitemaps": [
@@ -663,7 +658,7 @@
     },
     {
       "id": "ovhcloud",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -683,7 +678,7 @@
     },
     {
       "id": "contabo",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "unavailable",
       "sitemaps": [
@@ -701,7 +696,7 @@
     },
     {
       "id": "liquid-web",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [
@@ -721,7 +716,7 @@
     },
     {
       "id": "hetzner",
-      "checked_at": "2026-11-23T18:27:16+00:00",
+      "checked_at": "2026-11-24T17:55:37+00:00",
       "offers": 0,
       "status": "no_extractable_offer",
       "sitemaps": [

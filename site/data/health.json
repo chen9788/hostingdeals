@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T18:27:16+00:00",
+  "generated_at": "2026-11-24T17:55:37+00:00",
   "observed_offers": 3,
   "provider_status": {
     "digitalocean": "ok",
@@ -7,7 +7,7 @@
     "a2-hosting": "no_extractable_offer",
     "dreamhost": "no_extractable_offer",
     "vultr": "ok",
-    "namecheap": "unavailable",
+    "namecheap": "not_checked_paused_by_owner",
     "godaddy": "unavailable",
     "hostinger": "no_extractable_offer",
     "siteground": "no_extractable_offer",
