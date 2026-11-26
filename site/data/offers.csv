@@ -1,4 +1,4 @@
 provider,title,price_text,discount_text,term_text,renewal_text,valid_until,checked_at,source_url
-digitalocean,DigitalOcean Agent Droplets trial (AI product only),,,,,,2026-11-25T17:24:09+00:00,https://www.digitalocean.com/pricing/agent-droplets
-kinsta,Kinsta first month on eligible WordPress plans,,,30 days,"Billing begins in the second month, setting your ongoing monthly or annual billing date.",,2026-11-25T17:24:09+00:00,https://kinsta.com/docs/billing/wordpress-hosting-plans/
-vultr,Vultr introductory cloud credits,,,30 days,,,2026-11-25T17:24:09+00:00,https://docs.vultr.com/platform/create-an-account
+digitalocean,DigitalOcean Agent Droplets trial (AI product only),,,,,,2026-11-26T17:04:16+00:00,https://www.digitalocean.com/pricing/agent-droplets
+kinsta,Kinsta first month on eligible WordPress plans,,,30 days,"Billing begins in the second month, setting your ongoing monthly or annual billing date.",,2026-11-26T17:04:16+00:00,https://kinsta.com/docs/billing/wordpress-hosting-plans/
+vultr,Vultr introductory cloud credits,,,30 days,,,2026-11-26T17:04:16+00:00,https://docs.vultr.com/platform/create-an-account
